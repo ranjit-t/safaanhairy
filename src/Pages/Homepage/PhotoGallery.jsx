@@ -11,7 +11,7 @@ export default function PhotoGallery() {
       <h2 className="text-5xl text-center mb-16">
         Life is who you spend time with...
       </h2>
-      <div className="flex flex-row flex-wrap justify-center gap-4 ">
+      <div className="flex flex-row flex-wrap justify-center gap-4   w-screen px-[15vw]">
         {[
           { src: Thami, alt: "Thami" },
           { src: John, alt: "John" },
