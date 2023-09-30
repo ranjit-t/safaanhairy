@@ -8,3 +8,34 @@ body {
 .specialFont {
   font-family: "Yatra One", cursive;
 }
+
+/* .active {
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white !important;
+  background-color: #226000;
+} */
+
+.nav-bar-in-header {
+  margin-right: 25px;
+}
+.nav-bar > * {
+  padding: 5px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.nav-link {
+  margin: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.nav-link:visited {
+  color: inherit;
+}
+.nav-link:link {
+  color: inherit;
+}
+.nav-bar {
+  display: none;
+}

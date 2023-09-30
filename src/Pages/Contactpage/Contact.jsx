@@ -1,9 +1,10 @@
 import React from "react";
+import PageHeader from "../../GlobalUI/PageHeader";
 
 export default function Contact() {
   return (
-    <div className="mt-4">
-      <h1>Contact</h1>
+    <div>
+      <PageHeader>Contact</PageHeader>
     </div>
   );
 }
