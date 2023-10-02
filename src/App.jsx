@@ -1,4 +1,10 @@
-import { NavLink, Route, Routes, BrowserRouter } from "react-router-dom";
+import {
+  NavLink,
+  Route,
+  Routes,
+  BrowserRouter,
+  useNavigate,
+} from "react-router-dom";
 import Homepage from "./Pages/Homepage/Homepage";
 import Contact from "./Pages/Contactpage/Contact";
 import Notfound from "./Pages/Notfound";
@@ -6,23 +12,23 @@ import "./App.css";
 import Allblogs from "./Pages/Allblogs/Allblogs";
 import Singleblog from "./Pages/Singleblog/Singleblog";
 import { useFetch } from "./Util/Hooks/useFetch";
+import NewBlog from "./Pages/NewBlog/NewBlog";
+import useFetchBlogs from "./Util/Hooks/useFetchBlogs";
 
 function App() {
-  const { isLoading, error, blogs } = useFetch(
-    "https://test.aveyronici.com/Data/blogs.json"
-  );
+  const { blogs, loading, error } = useFetchBlogs();
 
   return (
     <div className="relative min-h-screen">
       <BrowserRouter>
         <div className="flex items-center shadow-md">
           <div className="w-full py-4 px-6">
-            <NavLink
-              className="text-xl sm:text-2xl font-bold cursor-pointer"
-              to="/"
-            >
-              Safaa Nhairy
-            </NavLink>
+            <img
+              src="/SafaaLogo.jpeg"
+              alt="Logo"
+              className="min-w-[100px] max-w-[100px] sm:max-w-[180px] cursor-pointer "
+              onClick={() => (location.href = "/")}
+            />
           </div>
           <div className="nav-bar-in-header">
             <NavLink className="nav-link" to="/contact">
@@ -30,6 +36,9 @@ function App() {
             </NavLink>
             <NavLink className="nav-link" to="/blogs">
               Blogs
+            </NavLink>
+            <NavLink className="nav-link" to="/publish-article">
+              Publish
             </NavLink>
           </div>
         </div>
@@ -42,23 +51,26 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/publish-article" element={<NewBlog />} />
           <Route
             path="/blogs"
             element={
-              <Allblogs blogs={blogs} error={error} isLoading={isLoading} />
+              <Allblogs blogs={blogs} error={error} isLoading={loading} />
             }
           />
           <Route
             path="/blog/:id"
             element={
-              <Singleblog blogs={blogs} error={error} isLoading={isLoading} />
+              <Singleblog blogs={blogs} error={error} isLoading={loading} />
             }
           />
           <Route path="*" element={<Notfound />} />
         </Routes>
       </BrowserRouter>
-      <div className="flex justify-center my-2 mt-8">
-        <p className="text-center absolute bottom-0">Developed by Ranjit T</p>
+      <div className="flex justify-center  mt-14">
+        <p className="text-center absolute bottom-4 text-[12px]">
+          Developed by Ranjit T
+        </p>
       </div>
     </div>
   );

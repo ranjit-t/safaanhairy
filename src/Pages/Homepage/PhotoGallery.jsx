@@ -7,7 +7,7 @@ import Man4 from "../../Images/Man4.png";
 
 export default function PhotoGallery() {
   return (
-    <div className="bg-[#E8EDE7] py-16 w-full">
+    <div className="bg-[#F4E0B9] py-16 w-full">
       <h2 className="text-5xl text-center mb-16">
         Life is who you spend time with...
       </h2>

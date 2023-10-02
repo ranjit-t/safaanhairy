@@ -3,14 +3,14 @@ import Safaa from "../../Images/safaaIcon.jpeg";
 
 export default function VideoIntro() {
   return (
-    <div className="bg-gradient-to-r from-[#EDE1CF] to-[#E8EDE7] my-8 py-8 gap-8 flex flex-col items-center w-full">
+    <div className="bg-black text-white my-8 py-8 gap-8 flex flex-col items-center w-full">
       <h1 className="text-2xl font-[700] specialFont">The World Needs You</h1>
 
-      <div className="w-[90%] md:w-[50%] md:max-w-[500px] border border-[12px] border-white rounded-lg">
+      <div className="w-[90%] md:w-[50%] md:max-w-[500px] border border-[12px] border-white rounded-lg h-[283px]">
         <iframe
           title="Course Video"
           src="https://www.youtube.com/embed/N29AXj9vCV4"
-          className="w-full h-64"
+          className="w-full h-[260px]"
           allowFullScreen
         ></iframe>
       </div>

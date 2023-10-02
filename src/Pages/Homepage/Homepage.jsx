@@ -10,7 +10,7 @@ export default function Homepage() {
   return (
     <div className="flex flex-col items-center w-screen">
       <img src={Book} alt="Vivre De Sa Passion" className="w-full" />
-      <div className="bg-[#E8EDE7]  flex flex-col md:flex-row items-center justify-evenly  w-screen px-[10vw] py-10 gap-6">
+      <div className="bg-[#F4E0B9]  text-lg  flex flex-col md:flex-row items-center justify-evenly  w-screen px-[10vw] py-10 gap-6">
         <div className="max-w-[400px]">
           <img src={Portrait} alt="Portait" />
         </div>

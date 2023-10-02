@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo+2&family=Yatra+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&family=Onest&family=Yatra+One&display=swap");
 
 html,
 body {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Onest", sans-serif;
 }
 
 .specialFont {
@@ -14,20 +14,23 @@ body {
   font-size: 20px;
   text-decoration: none;
   color: white !important;
-  background-color: #226000;
+  background-color: #f4e0b9;
 } */
+.logo {
+  color: white !important;
+  background-color: #ffffff;
+}
 
 .nav-bar-in-header {
   margin-right: 25px;
 }
 .nav-bar > * {
-  padding: 5px;
-  font-size: 20px;
+  padding: 2px;
   text-decoration: none;
 }
 .nav-link {
-  margin: 10px;
-  font-size: 20px;
+  margin: 0 10px;
+  font-size: 16px;
   text-decoration: none;
 }
 .nav-link:visited {
@@ -38,4 +41,23 @@ body {
 }
 .nav-bar {
   display: none;
+}
+
+iframe {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 520px) {
+  iframe {
+    max-width: 90vw;
+  }
+}
+
+.oldBlog img {
+  margin: 10px auto;
+}
+.oldBlog * {
+  margin-bottom: 10px;
 }
