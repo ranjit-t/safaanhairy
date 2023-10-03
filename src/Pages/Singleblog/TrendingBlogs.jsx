@@ -1,0 +1,41 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+
+export default function TrendingBlogs({ blogs }) {
+  const trendingBlogs = blogs.filter((blog) => blog.trending === true);
+
+  const navigate = useNavigate();
+
+  return (
+    <div>
+      <h3 className="flex  text-2xl font-bold  w-[95vw] mx-auto  mt-4 ">
+        You might also like
+      </h3>
+      <div className="flex  items-center   overflow-x-scroll overflow-y-hidden bg-[#F4E0B9] p-4 h-[500px] mt-4">
+        {trendingBlogs.map((blog, idx) => {
+          return (
+            <div
+              key={idx}
+              className="flex flex-col items-center justify-center p-8 m-4  rounded-lg cursor-pointer min-w-[80vw] sm:min-w-[450px] bg-white shadow-md h-[350px]"
+              onClick={() => {
+                navigate(`/blog/${blog.blogID}`);
+              }}
+            >
+              <div className="w-full flex flex-col items-center justify-center">
+                <p className="text-xl font-bold ">{blog.title}</p>
+                <p className="text-md text-gray-700 mt-4">
+                  {blog.content[0].slice(0, 50)} ...
+                </p>
+                <img
+                  src={blog.image}
+                  alt=""
+                  className="w-screen h-[180px] object-cover md:w-[50vw] mt-4 transform scale-95 hover:scale-100 transition-transform duration-300 ease-in-out"
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
