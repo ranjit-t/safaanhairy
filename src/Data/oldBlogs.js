@@ -7,6 +7,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-11-15 19:12:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/11/15/how-to-remember-what-you-learn-stop-being-lazy-and-be-successful/",
   },
@@ -18,6 +19,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-11-03 19:01:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/11/03/how-to-achieve-more-in-less-time/",
   },
@@ -29,6 +31,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-07-19 11:15:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/07/19/how-to-be-more-visible-on-instagram/",
   },
@@ -40,6 +43,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-07-01 16:54:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/07/01/10-productive-things-to-do-in-your-freetime/",
   },
@@ -51,6 +55,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-06-21 10:24:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/06/21/7-habits-to-eliminate-distractions-and-be-more-productive/",
   },
@@ -62,6 +67,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-06-14 08:22:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/06/14/how-to-be-happy-healthy-productive-successful/",
   },
@@ -73,6 +79,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-06-07 23:13:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/06/08/paris-vlog-meetup-making-friends-hustling/",
   },
@@ -84,6 +91,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-06-03 22:23:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/06/03/5-people-you-need-in-your-life-to-succeed/",
   },
@@ -95,6 +103,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-05-14 13:39:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/05/14/why-you-should-stop-thinking-and-start-doing/",
   },
@@ -106,6 +115,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-05-08 22:19:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/05/08/how-to-achieve-monthly-goals-make-progress-free-printable/",
   },
@@ -117,6 +127,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-05-08 22:12:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/05/08/casablanca-hustlers-group-meetup-business-food-sun/",
   },
@@ -128,6 +139,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-05-08 22:06:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/05/08/how-to-impact-the-world-leave-a-legacy/",
   },
@@ -139,6 +151,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-04-17 10:17:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/04/17/how-to-self-care-for-busy-and-highly-active-people/",
   },
@@ -150,6 +163,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-04-09 15:37:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/04/09/how-to-start-a-business-while-youre-employed/",
   },
@@ -161,6 +175,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-04-03 11:54:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/04/03/how-not-to-feel-lonely-as-an-entrepreneur/",
   },
@@ -172,6 +187,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-03-27 22:08:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/03/27/how-to-let-go-achieve-success-faster-with-john-purkiss/",
   },
@@ -183,6 +199,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-03-21 23:08:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2018/03/21/your-questions-answered/",
   },
   {
@@ -193,6 +210,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-03-08 22:36:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2018/03/08/london-under-the-snow/",
   },
   {
@@ -203,6 +221,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-02-23 13:14:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2018/02/23/your-life-purpose-legacy/",
   },
   {
@@ -213,6 +232,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-02-21 22:37:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/02/21/how-to-build-a-personal-brand-online/",
   },
@@ -224,6 +244,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-02-03 17:43:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/02/03/how-to-network-effectively-create-meaningful-connections/",
   },
@@ -235,6 +256,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-01-16 14:04:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/01/16/change-agent-in-morocco-safaa-nhairy/",
   },
@@ -246,6 +268,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-01-12 21:48:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/01/12/what-building-a-real-business-means/",
   },
@@ -257,6 +280,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2018-01-02 19:32:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2018/01/02/3-tips-to-boost-your-results-this-year/",
   },
@@ -268,6 +292,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-12-31 11:39:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2017/12/31/goodbye-2017-you-stretched-me-in-every-possible-way/",
   },
@@ -279,6 +304,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-12-26 12:52:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2017/12/26/how-to-stay-motivated/",
   },
   {
@@ -289,6 +315,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-12-18 22:43:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2017/12/18/why-working-hard-isnt-enough-to-succeed/",
   },
@@ -300,6 +327,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-12-12 19:05:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2017/12/12/how-to-be-more-productive/",
   },
   {
@@ -310,6 +338,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-12-04 19:11:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2017/12/04/how-to-get-an-mba-without-going-back-to-school/",
   },
@@ -322,6 +351,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-12-01 10:18:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2017/12/01/december-challenge-its-not-too-late-to-make-this-year-a-remarkable-year/",
   },
@@ -333,6 +363,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-11-20 23:26:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2017/11/20/casablanca-history-business-fun/",
   },
@@ -344,6 +375,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-11-12 20:09:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2017/11/12/its-okay-to-change-your-mind/",
   },
@@ -355,6 +387,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-11-02 14:23:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2017/11/02/my-values-a-blessing-and-a-curse/",
   },
@@ -366,6 +399,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-10-01 10:19:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2017/10/01/what-excuses-do-you-have-again/",
   },
@@ -377,6 +411,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-09-15 08:07:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2017/09/15/faire-de-sa-passion-un-business-lucratif-success-stories/",
   },
@@ -388,6 +423,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-08-29 10:28:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2017/08/29/why-you-should-fall-down-to-reach-your-goals/",
   },
@@ -399,6 +435,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-08-18 10:12:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2017/08/18/who-your-real-friends-are/",
   },
   {
@@ -409,6 +446,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-06-22 16:17:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2017/06/22/make-every-day-count/",
   },
   {
@@ -419,6 +457,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-06-02 09:56:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2017/06/02/let-us-amaze-you-with/",
   },
   {
@@ -429,6 +468,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-05-11 12:24:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2017/05/11/how-to-become-a-journalist-in-the-mainstream-media/",
   },
@@ -440,6 +480,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-04-24 19:23:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2017/04/24/turn-your-passion-into-a-profitable-business/",
   },
@@ -451,6 +492,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-04-18 18:36:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2017/04/18/doing-what-you-love-is-not-selfish/",
   },
@@ -462,6 +504,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-04-11 17:21:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2017/04/11/getting-angry-and-yelling-in-public-time-to-learn-to-let-go/",
   },
@@ -473,6 +516,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-04-03 20:15:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2017/04/03/meet-children-of-shatila-refugee-camp/",
   },
@@ -484,6 +528,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-03-27 19:06:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2017/03/27/visiting-marrakesh-ourika/",
   },
   {
@@ -494,6 +539,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-02-28 11:38:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2017/02/28/you-need-to-do-this-every-day/",
   },
@@ -505,6 +551,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-02-19 18:21:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2017/02/19/services-en-ligne-que-jai-essayes-au-maroc/",
   },
@@ -516,6 +563,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-01-31 15:40:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2017/01/31/id-love-your-feedback/",
   },
   {
@@ -526,6 +574,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2017-01-24 15:37:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2017/01/24/i-dont-have-time/",
   },
   {
@@ -536,6 +585,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-12-31 18:10:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2016/12/31/what-i-learned-in-2016/",
   },
   {
@@ -546,6 +596,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-12-26 19:41:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2016/12/26/my-top-business-and-personal-development-books/",
   },
@@ -557,6 +608,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-12-21 19:34:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2016/12/21/your-end-of-year-check-up/",
   },
   {
@@ -567,6 +619,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-12-15 08:59:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2016/12/15/how-to-run-a-business-from-anywhere-in-the-world/",
   },
@@ -578,6 +631,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-12-08 19:02:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2016/12/08/today-is-the-day/",
   },
   {
@@ -588,6 +642,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-11-18 16:35:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2016/11/18/how-to-public-speak/",
   },
   {
@@ -598,6 +653,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-09-22 07:54:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2016/09/22/agadir-essaouira-sidi-kaouki/",
   },
@@ -609,6 +665,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-09-11 21:09:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2016/09/11/how-to-plan-effectively-achieve-your-goals/",
   },
@@ -620,6 +677,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-08-25 10:13:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2016/08/25/comment-bien-preparer-et-demarrer-sa-rentree/",
   },
@@ -631,6 +689,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-08-14 08:38:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2016/08/14/why-youre-not-getting-what-you-want-in-business-and-life/",
   },
@@ -642,6 +701,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-08-03 16:08:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2016/08/03/lazy-weekend-in-skhirat/",
   },
   {
@@ -652,6 +712,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-07-20 10:57:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2016/07/20/how-to-grow-a-business/",
   },
   {
@@ -662,6 +723,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-06-30 00:16:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2016/06/30/how-to-make-the-most-out-of-your-internship/",
   },
@@ -673,6 +735,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-06-11 12:03:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2016/06/11/things-to-do-during-ramadan/",
   },
@@ -684,6 +747,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-05-31 14:18:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2016/05/31/what-successful-people-do-that-others-dont/",
   },
@@ -695,6 +759,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-05-11 14:15:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2016/05/11/business-lessons-to-learn-from-children/",
   },
@@ -706,6 +771,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-04-19 19:22:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2016/04/19/how-to-position-yourself-as-an-expert/",
   },
@@ -717,6 +783,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-04-10 12:40:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2016/04/10/comment-gravir-les-echelons-dans-une-entreprise/",
   },
@@ -728,6 +795,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-03-20 14:41:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2016/03/20/reussir-son-entretien-dembauche-les-erreurs-a-eviter/",
   },
@@ -739,6 +807,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-02-27 10:56:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2016/02/27/how-to-embrace-the-fear-of-failure/",
   },
@@ -750,6 +819,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-02-15 10:57:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2016/02/15/the-changing-face-of-entrepreneurship-in-morocco/",
   },
@@ -761,6 +831,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-02-09 18:09:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2016/02/09/what-is-success-key-ingredients-to-a-fulfilling-life/",
   },
@@ -773,6 +844,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-02-02 10:20:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2016/02/02/comment-repondre-aux-emails-appels-efficacement-et-ne-plus-avoir-a-les-ignorer/",
   },
@@ -784,6 +856,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-01-19 10:19:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2016/01/19/new-ways-of-working-how-to-work-in-2016/",
   },
@@ -795,6 +868,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2016-01-12 10:53:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2016/01/12/how-to-make-room-for-creativity-and-limit-distractions/",
   },
@@ -807,6 +881,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-12-01 20:33:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2015/12/01/how-to-make-the-most-out-of-december-and-get-ahead-in-your-2015-goal-list/",
   },
@@ -818,6 +893,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-11-17 14:23:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2015/11/17/donner-une-nouvelle-vie-a-la-relation-client-au-maroc/",
   },
@@ -829,6 +905,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-11-16 13:31:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2015/11/16/mon-passage-sur-aswat-en-2007/",
   },
@@ -840,6 +917,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-09-15 17:36:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2015/09/15/time-for-change/",
   },
   {
@@ -850,6 +928,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-08-13 21:00:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2015/08/13/a-quoi-ressemble-mon-chemin-au-bureau/",
   },
@@ -861,6 +940,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-06-11 09:02:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2015/06/11/do-you-want-to-stress-out-all-your-life/",
   },
@@ -872,6 +952,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-06-03 11:09:00",
     "Post Type": "post",
+    language: "French",
     Permalink: "https://safaanhairy.com/2015/06/03/justice-pour-ray/",
   },
   {
@@ -882,6 +963,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-05-13 15:12:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2015/05/13/each-day-make-someone-smile/",
   },
@@ -893,6 +975,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-05-05 15:36:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2015/05/05/vous-avez-tous-une-image-de-marque/",
   },
@@ -904,6 +987,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-04-24 09:44:00",
     "Post Type": "post",
+    language: "French",
     Permalink: "https://safaanhairy.com/2015/04/24/faire-le-saut/",
   },
   {
@@ -914,6 +998,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-04-08 15:52:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2015/04/08/sauvons-les-animaux-de-nos-rues/",
   },
@@ -925,6 +1010,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-04-01 11:35:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2015/04/01/pourquoi-je-donne-une-formation-sur-lentreprenariat/",
   },
@@ -936,6 +1022,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-03-23 11:46:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2015/03/23/faire-de-sa-passion-un-business-lucratif-15-avril-a-casablanca/",
   },
@@ -947,6 +1034,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-02-20 18:59:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2015/02/20/hitchcock-celebrer-le-maitre-du-suspense/",
   },
@@ -958,6 +1046,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-02-17 10:48:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2015/02/17/aidez-moi-a-produire-une-bonne-formation/",
   },
@@ -969,6 +1058,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-01-29 10:55:00",
     "Post Type": "post",
+    language: "French",
     Permalink: "https://safaanhairy.com/2015/01/29/mantsayadch/",
   },
   {
@@ -979,6 +1069,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-01-15 17:02:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2015/01/15/flourless-pizza-soooo-gooooood/",
   },
@@ -990,6 +1081,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-01-12 11:44:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2015/01/12/how-to-make-your-passion-a-lucrative-business/",
   },
@@ -1001,6 +1093,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-01-06 20:43:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2015/01/06/how-to-set-up-objectives-and-stick-to-them-in-2015/",
   },
@@ -1012,6 +1105,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2015-01-02 11:32:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2015/01/02/a-very-important-and-serious-decision-i-make-for-this-year/",
   },
@@ -1023,6 +1117,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2014-12-26 11:19:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2014/12/26/what-i-did-in-2014/",
   },
   {
@@ -1033,6 +1128,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2014-09-26 09:06:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2014/09/26/i-am-thinking-youre-not-thinking/",
   },
@@ -1044,6 +1140,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2014-09-09 09:13:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2014/09/09/its-my-right-that-you-read-this-blog-post-right-now/",
   },
@@ -1055,6 +1152,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2014-07-22 11:32:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2014/07/22/la-petite-foire-creative-a-casablanca/",
   },
@@ -1066,6 +1164,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2014-07-16 14:46:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2014/07/16/my-favorite-quotes/",
   },
   {
@@ -1076,6 +1175,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2014-07-07 11:22:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2014/07/07/train-your-mind-to-make-you-feel-good/",
   },
@@ -1087,6 +1187,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2014-06-28 11:23:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2014/06/28/i-failed-and-i-am-proud/",
   },
   {
@@ -1097,6 +1198,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2014-05-13 08:23:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2014/05/13/mon-passage-sur-2545-datlantic-radio/",
   },
@@ -1108,6 +1210,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2014-03-31 08:21:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2014/03/31/forum-international-de-lentreprise-sociale-au-maroc/",
   },
@@ -1119,6 +1222,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2014-03-17 21:17:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2014/03/17/forum-international-de-lentreprise-sociale-au-maroc-2/",
   },
@@ -1130,6 +1234,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2014-02-14 17:41:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2014/02/14/happy-valentines-day/",
   },
   {
@@ -1141,6 +1246,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2014-02-03 17:07:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2014/02/03/my-view-of-how-to-have-a-positive-attitude-at-work-on-nisaa-min-al-maghreb/",
   },
@@ -1152,6 +1258,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2014-01-29 11:00:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2014/01/29/do-you-need-a-web-detox/",
   },
   {
@@ -1162,6 +1269,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2014-01-10 11:51:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2014/01/10/no-excuses-for-success/",
   },
   {
@@ -1172,6 +1280,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2014-01-03 18:54:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2014/01/03/have-you-made-the-right-resolutions-this-year/",
   },
@@ -1183,6 +1292,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2014-01-01 20:43:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2014/01/01/happy-new-year-2014/",
   },
   {
@@ -1193,6 +1303,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2013-12-27 11:24:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2013/12/27/do-you-hear-me/",
   },
   {
@@ -1203,6 +1314,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2013-11-12 16:34:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2013/11/12/expect-or-expect-not/",
   },
   {
@@ -1213,6 +1325,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2013-11-11 16:30:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2013/11/11/interview-radio-sur-lentrepreneuriat-au-maroc/",
   },
@@ -1224,6 +1337,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2013-11-10 22:57:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2013/11/10/premier-anniversaire-de-hakoo/",
   },
@@ -1235,6 +1349,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2013-10-28 11:04:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2013/10/28/the-best-thing-to-learn-in-the-real-world/",
   },
@@ -1246,6 +1361,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2013-10-21 11:31:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2013/10/21/before-you-get-out-of-bed-and-chase-your-dreams/",
   },
@@ -1257,6 +1373,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2013-10-14 09:07:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2013/10/14/dealing-with-the-feeling-of-failure/",
   },
@@ -1268,6 +1385,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2013-10-13 18:39:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2013/10/13/now-blogging-from-blogger/",
   },
   {
@@ -1278,6 +1396,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2013-09-27 17:31:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2013/09/27/are-you-ready-to-make-your-life-as-inconvenient-as-possible/",
   },
@@ -1289,6 +1408,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2013-09-23 17:30:00",
     "Post Type": "post",
+    language: "French",
     Permalink:
       "https://safaanhairy.com/2013/09/23/lauto-formation-et-les-jeunes-autodidactes/",
   },
@@ -1300,6 +1420,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2013-09-18 17:27:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2013/09/18/women-dont-want-to-sacrifice-anything/",
   },
@@ -1311,6 +1432,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2013-09-14 17:26:00",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2013/09/14/something-you-have-to-try-flourless-and-sugarless-pancakes/",
   },
@@ -1322,6 +1444,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2013-09-13 17:24:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2013/09/13/its-already-been-a-week/",
   },
   {
@@ -1332,6 +1455,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2013-09-10 17:23:00",
     "Post Type": "post",
+    language: "French",
     Permalink: "https://safaanhairy.com/2013/09/10/comment-reussir-sa-reprise/",
   },
   {
@@ -1342,6 +1466,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2013-08-26 17:19:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2013/08/26/preparing-a-new-beginning/",
   },
   {
@@ -1352,6 +1477,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2013-08-21 17:09:00",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2013/08/21/i-finally-did/",
   },
   {
@@ -1362,6 +1488,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2019-04-14 21:22:55",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2019/04/14/how-to-effectively-sell-high-ticket-products-services/",
   },
@@ -1373,6 +1500,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2019-04-26 09:45:56",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2019/04/26/7-things-to-know-to-turn-your-passion-into-a-profitable-business/",
   },
@@ -1385,6 +1513,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2019-04-29 15:19:26",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2019/04/29/how-to-build-a-business-around-your-passion-2019-inspiring-story-of-a-coach-teacher-author/",
   },
@@ -1396,6 +1525,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2019-05-14 10:41:43",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2019/05/14/how-religion-is-a-form-of-personal-development/",
   },
@@ -1407,6 +1537,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2019-05-20 13:38:41",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2019/05/20/11-differences-between-entrepreneurs-employees/",
   },
@@ -1418,6 +1549,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2019-05-28 11:46:47",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2019/05/28/1485/",
   },
   {
@@ -1428,6 +1560,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2019-06-11 14:28:54",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2019/06/11/how-long-does-it-take-to-be-successful/",
   },
@@ -1439,6 +1572,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2019-06-24 12:29:13",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2019/06/24/how-to-get-your-dream-job/",
   },
   {
@@ -1449,6 +1583,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2019-07-15 14:41:34",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2019/07/15/7-habits-to-supercharge-your-productivity/",
   },
@@ -1460,6 +1595,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2019-08-08 10:30:42",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/2019/08/08/mistake/",
   },
   {
@@ -1471,6 +1607,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2019-08-08 10:50:12",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2019/08/08/how-to-legally-protect-your-small-business-tips-to-help-you-get-started/",
   },
@@ -1482,6 +1619,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2019-09-05 11:01:19",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2019/09/05/6-things-you-should-spend-your-extra-money-on/",
   },
@@ -1493,6 +1631,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2019-09-05 11:17:35",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2019/09/05/how-to-prepare-for-the-back-to-work-school-season-2019/",
   },
@@ -1504,6 +1643,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2019-09-17 20:01:06",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2019/09/17/the-key-to-happiness-how-to-be-happy-every-day/",
   },
@@ -1515,6 +1655,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2019-10-11 08:56:30",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2019/10/11/3-simple-habits-for-energy-productivity/",
   },
@@ -1527,6 +1668,7 @@ export const oldBlogs = [
       "The beginning of the New Year is a good time to make resolutions. However, many of us find that what we set out for ourselves might not make it until February, not to mention August. University of Scranton research found that just 8 percent of people achieve their New Year’s goals. While setting goals can be exciting, sticking to them and working on them regularly can put people off, especially when they have to be their own coaches and have no accountability or report to hand in at the end of the year. \n\nHere are 5 tips to make sure you don’t repeat the same mistakes as the previous year and that you will finally achieve your most important goals: ",
     Date: "2020-01-06 17:51:50",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2020/01/06/how-to-stick-to-your-goals-in-2020/",
   },
@@ -1538,6 +1680,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2020-01-19 19:31:02",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2020/01/19/build-and-sustain-good-habits/",
   },
@@ -1549,6 +1692,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/?p=1692",
   },
   {
@@ -1559,6 +1703,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2020-02-04 17:33:46",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2020/02/04/10-habits-to-be-a-better-person/",
   },
@@ -1570,6 +1715,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2020-03-17 18:48:29",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2020/03/17/to-do-during-the-coronavirus-lockdown/",
   },
@@ -1581,6 +1727,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/?p=1712",
   },
   {
@@ -1591,6 +1738,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/?p=1718",
   },
   {
@@ -1601,6 +1749,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/?p=1727",
   },
   {
@@ -1611,6 +1760,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/?p=1732",
   },
   {
@@ -1621,6 +1771,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/?p=1748",
   },
   {
@@ -1631,6 +1782,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/?p=1753",
   },
   {
@@ -1641,6 +1793,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/?p=1759",
   },
   {
@@ -1651,6 +1804,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/?p=1761",
   },
   {
@@ -1661,6 +1815,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/?p=1763",
   },
   {
@@ -1671,6 +1826,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/?p=1765",
   },
   {
@@ -1681,6 +1837,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/?p=1767",
   },
   {
@@ -1691,6 +1848,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/?p=1769",
   },
   {
@@ -1701,6 +1859,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2020-05-02 15:06:40",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2020/05/02/12-ways-small-businesses-can-turn-the-crisis-into-an-opportunity/",
   },
@@ -1712,6 +1871,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2020-05-28 09:14:10",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2020/05/28/what-i-learned-during-the-coronavirus-lockdown/",
   },
@@ -1724,6 +1884,7 @@ export const oldBlogs = [
       "Whether you’ve lost your job due to the Coronavirus crisis or you want to develop or even pivot your business, here are 17 business ideas you can launch during these unprecedented times.",
     Date: "2020-06-03 16:11:54",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2020/06/03/17-business-ideas-to-launch-during-the-coronavirus-crisis/",
   },
@@ -1735,6 +1896,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "",
     "Post Type": "post",
+    language: "English",
     Permalink: "https://safaanhairy.com/?p=1842",
   },
   {
@@ -1746,6 +1908,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2020-08-21 12:59:22",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2020/08/21/how-being-less-busy-helped-me-be-productive-and-happier/",
   },
@@ -1757,6 +1920,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2020-10-22 19:20:17",
     "Post Type": "post",
+    language: "French",
     Permalink: "https://safaanhairy.com/2020/10/22/freedomofspeech/",
   },
   {
@@ -1767,6 +1931,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2020-10-31 11:44:57",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2020/10/31/freedom-of-speech-the-illusion/",
   },
@@ -1778,6 +1943,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2020-12-03 12:32:16",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2020/12/03/why-entrepreneurship-is-hard/",
   },
@@ -1790,6 +1956,7 @@ export const oldBlogs = [
     Excerpt: "",
     Date: "2021-12-15 16:50:39",
     "Post Type": "post",
+    language: "English",
     Permalink:
       "https://safaanhairy.com/2021/12/15/the-great-resignation-doesnt-concern-just-the-millennials-and-what-do-they-really-want/",
   },

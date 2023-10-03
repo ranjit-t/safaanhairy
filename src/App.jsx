@@ -1,17 +1,10 @@
-import {
-  NavLink,
-  Route,
-  Routes,
-  BrowserRouter,
-  useNavigate,
-} from "react-router-dom";
+import { NavLink, Route, Routes, BrowserRouter } from "react-router-dom";
 import Homepage from "./Pages/Homepage/Homepage";
 import Contact from "./Pages/Contactpage/Contact";
 import Notfound from "./Pages/Notfound";
 import "./App.css";
 import Allblogs from "./Pages/Allblogs/Allblogs";
 import Singleblog from "./Pages/Singleblog/Singleblog";
-import { useFetch } from "./Util/Hooks/useFetch";
 import NewBlog from "./Pages/NewBlog/NewBlog";
 import useFetchBlogs from "./Util/Hooks/useFetchBlogs";
 
@@ -37,9 +30,9 @@ function App() {
             <NavLink className="nav-link" to="/blogs">
               Blogs
             </NavLink>
-            <NavLink className="nav-link" to="/publish-article">
+            {/* <NavLink className="nav-link" to="/publish-article">
               Publish
-            </NavLink>
+            </NavLink> */}
           </div>
         </div>
         <div className="w-full">
