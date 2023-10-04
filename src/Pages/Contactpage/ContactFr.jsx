@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import PageHeader from "../../GlobalUI/PageHeader";
 import emailjs from "emailjs-com";
 
-export default function Contact() {
+export default function ContactFr() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -34,8 +34,7 @@ export default function Contact() {
       )
       .then(
         (result) => {
-          // console.log(result.text);
-          setMessage("Your Message has been successfully sent!");
+          setMessage("Votre message a été envoyé avec succès !");
           setSendStatus("succes");
           setFormData({
             name: "",
@@ -45,7 +44,7 @@ export default function Contact() {
           });
         },
         (error) => {
-          setMessage("Oops, there is a problem, try again later!");
+          setMessage("Oops, il y a un problème, réessayez plus tard !");
           setSendStatus("error");
         }
       );
@@ -53,10 +52,10 @@ export default function Contact() {
 
   return (
     <div className="w-[80vw] max-w-[480px] mx-auto flex flex-col items-center">
-      <PageHeader css="specialFont">Contact Me</PageHeader>
+      <PageHeader>Contactez-moi</PageHeader>
       <p className="text-lg text-center my-10">
-        For business partnerships or collaborations or just to say hello, please
-        send me a message here.
+        Pour des partenariats commerciaux ou des collaborations, ou simplement
+        pour dire bonjour, veuillez m'envoyer un message ici.
       </p>
       <form
         ref={formRef}
@@ -64,11 +63,11 @@ export default function Contact() {
         className="bg-[#F4E0B9] w-screen flex flex-col items-center mt-4 py-10"
       >
         <div className="">
-          <p className="my-2">Your Name :</p>
+          <p className="my-2">Votre nom :</p>
           <input
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder="Nom"
             value={formData.name}
             onChange={handleChange}
             className="p-2 rounded-md w-[80vw] sm:w-[400px]"
@@ -76,11 +75,11 @@ export default function Contact() {
           />
         </div>
         <div className="my-4">
-          <p className="mb-2">Your Email :</p>
+          <p className="mb-2">Votre e-mail :</p>
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="E-mail"
             value={formData.email}
             onChange={handleChange}
             className="p-2 rounded-md w-[80vw] sm:w-[400px]"
@@ -88,11 +87,11 @@ export default function Contact() {
           />
         </div>
         <div className="my-4">
-          <p className="mb-2">Subject :</p>
+          <p className="mb-2">Sujet :</p>
           <input
             type="text"
             name="subject"
-            placeholder="Subject"
+            placeholder="Sujet"
             className="p-2 rounded-md w-[80vw] sm:w-[400px]"
             value={formData.subject}
             onChange={handleChange}
@@ -126,7 +125,7 @@ export default function Contact() {
           type="submit"
           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
         >
-          Send
+          Envoyer
         </button>
       </form>
     </div>

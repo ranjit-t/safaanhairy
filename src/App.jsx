@@ -1,4 +1,10 @@
-import { NavLink, Route, Routes, BrowserRouter } from "react-router-dom";
+import {
+  NavLink,
+  Route,
+  Routes,
+  BrowserRouter,
+  useNavigate,
+} from "react-router-dom";
 import Homepage from "./Pages/Homepage/Homepage";
 import Contact from "./Pages/Contactpage/Contact";
 import Notfound from "./Pages/Notfound";
@@ -7,9 +13,45 @@ import Allblogs from "./Pages/Allblogs/Allblogs";
 import Singleblog from "./Pages/Singleblog/Singleblog";
 import NewBlog from "./Pages/NewBlog/NewBlog";
 import useFetchBlogs from "./Util/Hooks/useFetchBlogs";
+import { useState } from "react";
+import ChooseLang from "./Pages/ChooseLang";
+import AllblogsFr from "./Pages/Allblogs/AllBlogsFr";
+import ContactFr from "./Pages/Contactpage/ContactFr";
+import HomepageFr from "./Pages/HomepageFr/HomepageFr";
 
 function App() {
   const { blogs, loading, error } = useFetchBlogs();
+
+  const initialLanguage = location.pathname.startsWith("/fr")
+    ? "French"
+    : "English";
+
+  const [language, setLanguage] = useState(initialLanguage);
+
+  // const navigate = useNavigate();
+
+  // Function to handle language change
+  const handleLanguageChange = (e) => {
+    const selectedLanguage = e.target.value;
+    setLanguage(selectedLanguage);
+
+    // Get the current pathname
+    const currentPath = window.location.pathname;
+
+    // Determine the new path based on the selected language
+    let newPath = currentPath;
+    if (currentPath.startsWith("/en") && selectedLanguage === "French") {
+      newPath = currentPath.replace("/en", "/fr");
+    } else if (
+      currentPath.startsWith("/fr") &&
+      selectedLanguage === "English"
+    ) {
+      newPath = currentPath.replace("/fr", "/en");
+    }
+
+    // Navigate to the new path
+    location.href = newPath;
+  };
 
   return (
     <div className="relative min-h-screen">
@@ -23,16 +65,25 @@ function App() {
               onClick={() => (location.href = "/")}
             />
           </div>
-          <div className="nav-bar-in-header">
-            <NavLink className="nav-link" to="/contact">
+          <div className="flex nav-bar-in-header">
+            <NavLink
+              className="nav-link"
+              to={language === "English" ? "/en/contact" : "/fr/contact"}
+            >
               Contact
             </NavLink>
-            <NavLink className="nav-link" to="/blogs">
+            <NavLink
+              className="nav-link"
+              to={language === "English" ? "/en/blogs" : "/fr/blogs"}
+            >
               Blogs
             </NavLink>
-            {/* <NavLink className="nav-link" to="/publish-article">
-              Publish
-            </NavLink> */}
+            <div className="ml-4">
+              <select value={language} onChange={handleLanguageChange}>
+                <option value="English">En</option>
+                <option value="French">Fr</option>
+              </select>
+            </div>
           </div>
         </div>
         <div className="w-full">
@@ -42,21 +93,36 @@ function App() {
           <hr />
         </div>
         <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<ChooseLang setLanguage={setLanguage} />} />
+          <Route path="/en" element={<Homepage />} />
+          <Route path="/fr" element={<HomepageFr />} />
+          <Route path="/en/contact" element={<Contact />} />
+          <Route path="/fr/contact" element={<ContactFr />} />
           <Route path="/publish-article" element={<NewBlog />} />
           <Route
-            path="/blogs"
+            path="/en/blogs"
             element={
               <Allblogs blogs={blogs} error={error} isLoading={loading} />
             }
           />
           <Route
-            path="/blog/:id"
+            path="/fr/blogs"
             element={
-              <Singleblog blogs={blogs} error={error} isLoading={loading} />
+              <AllblogsFr blogs={blogs} error={error} isLoading={loading} />
             }
           />
+          <Route
+            path="/blog/:id"
+            element={
+              <Singleblog
+                blogs={blogs}
+                error={error}
+                isLoading={loading}
+                language={language}
+              />
+            }
+          />
+
           <Route path="*" element={<Notfound />} />
         </Routes>
       </BrowserRouter>

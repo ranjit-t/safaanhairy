@@ -5,25 +5,20 @@ import { oldBlogs } from "../../Data/oldBlogs.js";
 import { useEffect, useState } from "react";
 import uparrow from "../../Images/uparrow.svg";
 
-export default function Allblogs({ blogs, error, isLoading }) {
+export default function AllblogsFr({ blogs, error, isLoading }) {
   const navigate = useNavigate();
 
-  const englishBlogs = blogs.filter((blog) => blog.language === "English");
+  const englishBlogs = blogs.filter((blog) => blog.language === "French");
 
-  const englishOldBlogs = oldBlogs.filter(
-    (blog) => blog.language === "English"
-  );
+  const englishOldBlogs = oldBlogs.filter((blog) => blog.language === "French");
 
   const [search, setSearch] = useState("");
-  const [filteredOldBlogs, setFilteredOldBlogs] = useState(
-    blogs.filter((blog) => blog.language === "English")
-  );
+  const [filteredOldBlogs, setFilteredOldBlogs] = useState(englishOldBlogs);
   const [filteredBlogs, setFilteredBlogs] = useState(englishBlogs);
 
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
-
   useEffect(() => {
     setFilteredOldBlogs(
       englishOldBlogs.filter((blog) =>

@@ -5,7 +5,7 @@ import { oldBlogs } from "../../Data/oldBlogs.js";
 import TrendingBlogs from "./TrendingBlogs.jsx";
 import { useEffect } from "react";
 
-export default function Singleblog({ blogs, error, isLoading }) {
+export default function Singleblog({ blogs, error, isLoading, language }) {
   const { id } = useParams();
 
   const pageID = id;
@@ -66,7 +66,7 @@ export default function Singleblog({ blogs, error, isLoading }) {
             Article Published by Safaa Nhairy
           </p>
         </div>
-        <TrendingBlogs blogs={blogs} />
+        <TrendingBlogs blogs={blogs} language={language} />
       </div>
     );
   }

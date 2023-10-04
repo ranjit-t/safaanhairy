@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function TrendingBlogs({ blogs }) {
+export default function TrendingBlogs({ blogs, language }) {
   const trendingBlogs = blogs.filter((blog) => blog.trending === true);
 
   const navigate = useNavigate();
@@ -9,7 +9,9 @@ export default function TrendingBlogs({ blogs }) {
   return (
     <div>
       <h3 className="flex  text-2xl font-bold  w-[95vw] mx-auto  mt-4 ">
-        You might also like
+        {language === "English"
+          ? "You might also like"
+          : "Vous pourriez aussi aimer"}
       </h3>
       <div className="flex  items-center   overflow-x-scroll overflow-y-hidden bg-[#F4E0B9] p-4 h-[500px] mt-4">
         {trendingBlogs.map((blog, idx) => {
