@@ -5,37 +5,63 @@ import { oldBlogs } from "../../Data/oldBlogs.js";
 import { useEffect, useState } from "react";
 import uparrow from "../../Images/uparrow.svg";
 
-export default function Allblogs({ blogs, error, isLoading }) {
+export default function Allblogs({ blogs, isLoading, error }) {
   const navigate = useNavigate();
 
-  const englishBlogs = blogs.filter((blog) => blog.language === "English");
+  const englishBlogs = blogs
+    .filter((blog) => blog.language === "English")
+    .sort((a, b) => b.timePublished - a.timePublished);
 
   const englishOldBlogs = oldBlogs.filter(
     (blog) => blog.language === "English"
   );
 
   const [search, setSearch] = useState("");
-  const [filteredOldBlogs, setFilteredOldBlogs] = useState(
-    blogs.filter((blog) => blog.language === "English")
-  );
+  const [filteredOldBlogs, setFilteredOldBlogs] = useState(englishOldBlogs);
   const [filteredBlogs, setFilteredBlogs] = useState(englishBlogs);
+
+  const [timeDelay, settimeDelay] = useState(true);
+
+  useEffect(() => {
+    const delayTimeout = setTimeout(() => {
+      settimeDelay(false);
+    }, 500);
+
+    return () => {
+      clearTimeout(delayTimeout);
+    };
+  }, []);
 
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
 
   useEffect(() => {
-    setFilteredOldBlogs(
-      englishOldBlogs.filter((blog) =>
-        blog.Title.toLowerCase().includes(search.toLowerCase())
-      )
+    // Check if the blogs data is available
+    if (!blogs || blogs.length === 0) {
+      //
+    } else {
+      // Data is available, filter and set it
+      setFilteredOldBlogs(
+        englishOldBlogs.filter((blog) =>
+          blog.Title.toLowerCase().includes(search.toLowerCase())
+        )
+      );
+      setFilteredBlogs(
+        englishBlogs.filter((blog) =>
+          blog.title.toLowerCase().includes(search.toLowerCase())
+        )
+      );
+    }
+  }, [blogs, search]);
+
+  if (timeDelay) {
+    return (
+      <div className="mt-16 flex justify-center text-center text-xl">
+        <p>Loading...</p>
+      </div>
     );
-    setFilteredBlogs(
-      englishBlogs.filter((blog) =>
-        blog.title.toLowerCase().includes(search.toLowerCase())
-      )
-    );
-  }, [search]);
+  }
 
   if (isLoading) {
     return (
@@ -48,6 +74,7 @@ export default function Allblogs({ blogs, error, isLoading }) {
   if (error) {
     return <Notfound />;
   }
+
   return (
     <div>
       <PageHeader>Blogs</PageHeader>

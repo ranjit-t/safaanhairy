@@ -19,6 +19,7 @@ const useFetchBlogs = () => {
             ...doc.data(),
           });
         });
+        // console.log(blogList);
         setBlogs(blogList);
         setLoading(false);
       } catch (error) {

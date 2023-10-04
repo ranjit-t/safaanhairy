@@ -61,3 +61,10 @@ iframe {
 .oldBlog * {
   margin-bottom: 10px;
 }
+
+.link-styled {
+  font-weight: bold;
+  color: red;
+  cursor: pointer; /* Optional: Show a pointer cursor on hover */
+  text-decoration: none; /* Optional: Remove underline */
+}

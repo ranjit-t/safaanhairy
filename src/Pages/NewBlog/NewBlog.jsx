@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import PageHeader from "../../GlobalUI/PageHeader";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { storage, db } from "../../FireBase/config.js";
@@ -17,8 +17,15 @@ const NewBlog = () => {
     trending: false,
   });
 
+  const getContentRefs = () => {
+    return formData.content.map(() => React.createRef(null));
+  };
+
+  const contentRefs = getContentRefs();
+
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [focusedContentIndex, setFocusedContentIndex] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -41,6 +48,37 @@ const NewBlog = () => {
       ...formData,
       content: [...formData.content, ""],
     });
+    contentRefs.push(React.createRef());
+  };
+
+  const handleHyperLink = () => {
+    if (focusedContentIndex !== null) {
+      const linkText = prompt("Enter the link text:", "Your Text");
+      const linkURL = prompt("Enter the link URL:", "https://example.com");
+
+      if (linkText && linkURL) {
+        setFormData((prevData) => {
+          const updatedContent = prevData.content.map((item, idx) => {
+            if (idx === focusedContentIndex) {
+              const textBeforeCursor = item.substring(
+                0,
+                contentRefs[focusedContentIndex].current.selectionStart
+              );
+              const textAfterCursor = item.substring(
+                contentRefs[focusedContentIndex].current.selectionStart
+              );
+              return `${textBeforeCursor} <a href="${linkURL}" target="_blank" class="link-styled">${linkText}</a> ${textAfterCursor}`;
+            }
+            return item;
+          });
+
+          return {
+            ...prevData,
+            content: updatedContent,
+          };
+        });
+      }
+    }
   };
 
   const handleRemoveContent = (index) => {
@@ -51,6 +89,7 @@ const NewBlog = () => {
         ...formData,
         content: newContent,
       });
+      contentRefs.pop();
     }
   };
 
@@ -80,7 +119,10 @@ const NewBlog = () => {
       // Get the download URL of the uploaded image
       const imageURL = await getDownloadURL(storageRef);
 
-      // Create an object with all the data, including the imageURL
+      // Create a Date object for the current date and time
+      const currentDate = new Date();
+
+      // Create an object with all the data, including the imageURL and timePublished
       const dataToUpload = {
         blogID: Math.floor(Math.random() * 100000),
         title: formData.title,
@@ -89,9 +131,10 @@ const NewBlog = () => {
         content: formData.content,
         language: formData.language,
         trending: formData.trending,
+        timePublished: currentDate, // Add the timePublished field
       };
 
-      // Log the data with the image URL
+      // Log the data with the image URL and timePublished
       console.log(dataToUpload);
 
       const customDocRef = doc(db, "blogs", String(dataToUpload.blogID));
@@ -109,7 +152,11 @@ const NewBlog = () => {
         videoURL: "",
         content: [""],
         language: "English",
+        trending: false,
       });
+
+      // Clear the focused content index
+      setFocusedContentIndex(null);
     } catch (error) {
       // Set the error message
       setErrorMessage("Error adding blog: " + error.message);
@@ -173,10 +220,12 @@ const NewBlog = () => {
             {formData.content.map((contentText, index) => (
               <div key={index} className="flex items-center mb-2">
                 <textarea
+                  ref={contentRefs[index]}
                   value={contentText}
                   onChange={(e) => handleContentChange(index, e.target.value)}
                   className="flex-grow border rounded-md px-3 py-2 mr-2 focus:outline-none focus:border-blue-500 h-32"
                   required
+                  onFocus={() => setFocusedContentIndex(index)}
                 />
                 {formData.content.length > 1 && (
                   <button
@@ -189,13 +238,23 @@ const NewBlog = () => {
                 )}
               </div>
             ))}
-            <button
-              type="button"
-              onClick={handleAddContent}
-              className="mt-2 bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600"
-            >
-              Add Paragraph
-            </button>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={handleAddContent}
+                className="mt-2 bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600"
+              >
+                Add Paragraph
+              </button>
+
+              <button
+                type="button"
+                onClick={handleHyperLink}
+                className="mt-2 bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600"
+              >
+                Add HyperLink
+              </button>
+            </div>
           </div>
           <div className="mb-4">
             <label htmlFor="language" className="block text-gray-600">

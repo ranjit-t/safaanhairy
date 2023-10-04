@@ -1,10 +1,4 @@
-import {
-  NavLink,
-  Route,
-  Routes,
-  BrowserRouter,
-  useNavigate,
-} from "react-router-dom";
+import { NavLink, Route, Routes, BrowserRouter } from "react-router-dom";
 import Homepage from "./Pages/Homepage/Homepage";
 import Contact from "./Pages/Contactpage/Contact";
 import Notfound from "./Pages/Notfound";
@@ -29,8 +23,6 @@ function App() {
     : "English";
 
   const [language, setLanguage] = useState(initialLanguage);
-
-  // const navigate = useNavigate();
 
   // Function to handle language change
   const handleLanguageChange = (e) => {
@@ -84,14 +76,8 @@ function App() {
             </NavLink>
             <div className="ml-4">
               <select value={language} onChange={handleLanguageChange}>
-                <option value="English">
-                  En 🇬🇧
-                  <img src={uk} alt="En" />
-                </option>
-                <option value="French">
-                  Fr 🇫🇷
-                  <img src={fr} alt="Fr" />
-                </option>
+                <option value="English">En 🇬🇧</option>
+                <option value="French">Fr 🇫🇷</option>
               </select>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import PageHeader from "../../GlobalUI/PageHeader";
 import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha"; // Import reCAPTCHA
 
 export default function ContactFr() {
   const [formData, setFormData] = useState({
@@ -14,6 +15,8 @@ export default function ContactFr() {
   const [sendStatus, setSendStatus] = useState("error");
   const formRef = useRef(null);
 
+  const recaptchaRef = useRef(); // Create a ref for reCAPTCHA
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -24,6 +27,15 @@ export default function ContactFr() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Verify reCAPTCHA
+    const recaptchaValue = recaptchaRef.current.getValue();
+
+    if (!recaptchaValue) {
+      setMessage("Veuillez compléter le reCAPTCHA.");
+      setSendStatus("error");
+      return;
+    }
 
     emailjs
       .sendForm(
@@ -108,6 +120,12 @@ export default function ContactFr() {
             className="p-2 rounded-md w-[80vw] sm:w-[400px] min-h-[150px]"
             required
           ></textarea>
+          <div className="flex justify-center">
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey="6LeMb3YoAAAAAL0EULE9WK5pgHEYV17Dv_DTS5WN" // Replace with your reCAPTCHA Site Key
+            />
+          </div>
           {message && (
             <p
               className={
