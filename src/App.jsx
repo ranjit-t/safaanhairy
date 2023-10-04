@@ -18,6 +18,8 @@ import ChooseLang from "./Pages/ChooseLang";
 import AllblogsFr from "./Pages/Allblogs/AllBlogsFr";
 import ContactFr from "./Pages/Contactpage/ContactFr";
 import HomepageFr from "./Pages/HomepageFr/HomepageFr";
+import uk from "./Images/uk.png";
+import fr from "./Images/fr.png";
 
 function App() {
   const { blogs, loading, error } = useFetchBlogs();
@@ -56,13 +58,15 @@ function App() {
   return (
     <div className="relative min-h-screen">
       <BrowserRouter>
-        <div className="flex items-center shadow-md">
+        <div className="flex items-center  shadow-md">
           <div className="w-full py-4 px-6">
             <img
               src="/SafaaLogo.jpeg"
               alt="Logo"
               className="min-w-[100px] max-w-[100px] sm:max-w-[180px] cursor-pointer "
-              onClick={() => (location.href = "/")}
+              onClick={() =>
+                (location.href = language === "English" ? "/en" : "/fr")
+              }
             />
           </div>
           <div className="flex nav-bar-in-header">
@@ -80,8 +84,14 @@ function App() {
             </NavLink>
             <div className="ml-4">
               <select value={language} onChange={handleLanguageChange}>
-                <option value="English">En</option>
-                <option value="French">Fr</option>
+                <option value="English">
+                  En 🇬🇧
+                  <img src={uk} alt="En" />
+                </option>
+                <option value="French">
+                  Fr 🇫🇷
+                  <img src={fr} alt="Fr" />
+                </option>
               </select>
             </div>
           </div>

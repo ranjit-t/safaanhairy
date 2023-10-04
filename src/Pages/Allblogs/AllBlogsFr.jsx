@@ -35,7 +35,7 @@ export default function AllblogsFr({ blogs, error, isLoading }) {
   if (isLoading) {
     return (
       <div className="mt-16 flex justify-center text-center text-xl">
-        <p>Loading...</p>
+        <p>Chargement...</p>
       </div>
     );
   }
@@ -49,8 +49,8 @@ export default function AllblogsFr({ blogs, error, isLoading }) {
       <div className="flex justify-center mt-4 relative">
         <input
           type="text"
-          placeholder="search a blog"
-          className="border border-1 border-gray-600 px-4 py-1 rounded-full text-lg w-[150px] text-gray-700"
+          placeholder="rechercher un blog"
+          className="border border-1 border-gray-600 px-4 py-1 rounded-full text-lg w-[200px] text-gray-700"
           onChange={handleChange}
         />
       </div>
@@ -64,7 +64,7 @@ export default function AllblogsFr({ blogs, error, isLoading }) {
       </div>
       <div className="flex  items-center justify-center flex-wrap  bg-[#F4E0B9] p-4 mt-4 min-h-[550px]">
         {filteredBlogs.length === 0 && filteredOldBlogs.length === 0 && (
-          <p>Sorry, Nothing Found</p>
+          <p>Désolé, rien trouvé</p>
         )}
 
         {filteredBlogs.map((blog, idx) => {
