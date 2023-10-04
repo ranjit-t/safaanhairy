@@ -18,7 +18,7 @@ export default function TrendingBlogs({ blogs, language }) {
           return (
             <div
               key={idx}
-              className="flex flex-col items-center justify-center p-8 m-4  rounded-lg cursor-pointer min-w-[80vw] sm:min-w-[450px] bg-white shadow-md h-[350px]"
+              className="flex flex-col items-center justify-center p-8 m-4  rounded-lg cursor-pointer min-w-[80vw] sm:min-w-[450px] bg-white shadow-md h-[350px]  w-[80vw] sm:w-[450px]"
               onClick={() => {
                 navigate(`/blog/${blog.blogID}`);
               }}
