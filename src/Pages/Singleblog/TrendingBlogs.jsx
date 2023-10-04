@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function TrendingBlogs({ blogs, language }) {
-  const trendingBlogs = blogs.filter((blog) => blog.trending === true);
+  const trendingBlogs = blogs.filter((blog) => blog.trending === "true");
 
   const navigate = useNavigate();
 
