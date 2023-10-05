@@ -12,11 +12,11 @@ import ChooseLang from "./Pages/ChooseLang";
 import AllblogsFr from "./Pages/Allblogs/AllBlogsFr";
 import ContactFr from "./Pages/Contactpage/ContactFr";
 import HomepageFr from "./Pages/HomepageFr/HomepageFr";
-import uk from "./Images/uk.png";
-import fr from "./Images/fr.png";
+import useFetchOldBlogs from "./Util/Hooks/useFetchOldBlogs";
 
 function App() {
   const { blogs, loading, error } = useFetchBlogs();
+  const { oldBlogsFireStore } = useFetchOldBlogs();
 
   const initialLanguage = location.pathname.startsWith("/fr")
     ? "French"
@@ -50,7 +50,7 @@ function App() {
   return (
     <div className="relative min-h-screen">
       <BrowserRouter>
-        <div className="flex items-center  shadow-md">
+        <div className="flex items-center  ">
           <div className="w-full py-4 px-6">
             <img
               src="/SafaaLogo.jpeg"
@@ -64,16 +64,17 @@ function App() {
           <div className="flex nav-bar-in-header">
             <NavLink
               className="nav-link"
-              to={language === "English" ? "/en/contact" : "/fr/contact"}
-            >
-              Contact
-            </NavLink>
-            <NavLink
-              className="nav-link"
               to={language === "English" ? "/en/blogs" : "/fr/blogs"}
             >
               Blogs
             </NavLink>
+            <NavLink
+              className="nav-link"
+              to={language === "English" ? "/en/contact" : "/fr/contact"}
+            >
+              Contact
+            </NavLink>
+
             <div className="ml-4">
               <select value={language} onChange={handleLanguageChange}>
                 <option value="English">En 🇬🇧</option>
@@ -83,7 +84,7 @@ function App() {
           </div>
         </div>
         <div className="w-full">
-          <p className="py-2 px-6 text-[12px] sm:text-[16px]">
+          <p className="py-2 px-6 text-[12px] sm:text-[16px] shadow-md mb-2 -mt-4">
             Entrepreneurship, Communications & Leadership
           </p>
           <hr />
@@ -115,6 +116,7 @@ function App() {
                 error={error}
                 isLoading={loading}
                 language={language}
+                oldBlogsFireStore={oldBlogsFireStore}
               />
             }
           />

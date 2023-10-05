@@ -131,6 +131,7 @@ const NewBlog = () => {
         content: formData.content,
         language: formData.language,
         trending: formData.trending,
+        comments: [],
         timePublished: currentDate, // Add the timePublished field
       };
 
