@@ -73,3 +73,69 @@ iframe {
   box-shadow: rgba(255, 255, 255, 0.12) 0px 1px 3px,
     rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.ltr {
+  text-align: left;
+}
+
+.rtl {
+  text-align: right;
+}
+.text-editor {
+  width: 1086px;
+  margin: 0 auto;
+}
+.ql-editor {
+  min-height: 100px;
+}
+
+.ql-align-center {
+  text-align: center;
+}
+.ql-align-right {
+  text-align: right;
+}
+h1 {
+  font-size: 32px !important;
+}
+h2 {
+  font-size: 20px !important;
+}
+
+ol {
+  list-style-type: decimal !important;
+  font-weight: bold !important;
+}
+/* Custom styles for unordered lists */
+ul {
+  list-style-type: disc !important; /* Use disc bullets */
+  font-weight: bold !important; /* Make the list items bold */
+}
+
+/* Custom styles for list items */
+li {
+  font-weight: bold !important;
+}
+
+/* Custom styles for blockquote */
+blockquote {
+  border-left: 2px solid #333; /* Add a left border */
+  padding: 10px; /* Add padding to the blockquote */
+  font-weight: bold !important; /* Make the blockquote text bold */
+}
+
+/* Custom styles for <pre> elements with class "ql-syntax" (important) */
+.pre {
+  background-color: #f0f0f0 !important; /* Set a background color */
+  padding: 10px !important; /* Add padding for spacing */
+  font-family: monospace !important; /* Set a monospace font */
+  font-size: 14px !important; /* Adjust font size as needed */
+  white-space: pre-wrap !important; /* Preserve line breaks */
+  border: 1px solid #ccc !important; /* Add a border for clarity */
+  spell-check: false !important; /* Disable spellchecking */
+}

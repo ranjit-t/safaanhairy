@@ -33,7 +33,7 @@ const BlogPreview = ({ blog, closePreview }) => {
         )}
 
         <div className="w-screen px-[10vw] pb-8 leading-8 text-justify">
-          {blog.content.map((para, index) => {
+          {/* {blog.content.map((para, index) => {
             return (
               <div
                 dangerouslySetInnerHTML={{ __html: para }}
@@ -41,7 +41,11 @@ const BlogPreview = ({ blog, closePreview }) => {
                 className="py-4"
               ></div>
             );
-          })}
+          })} */}
+          <div
+            dangerouslySetInnerHTML={{ __html: blog.content }}
+            className="py-4"
+          ></div>
           <p className="text-lg font-bold mt-10 text-center">
             {blog.language === "English"
               ? "Article Published by Safaa Nhairy"
