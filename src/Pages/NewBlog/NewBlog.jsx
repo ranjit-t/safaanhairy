@@ -11,14 +11,6 @@ const NewBlog = () => {
 
   const [isPreviewOpen, setIsPreviewOpen] = useState(false); // State to track preview popup
 
-  const openPreview = () => {
-    setIsPreviewOpen(true);
-  };
-
-  const closePreview = () => {
-    setIsPreviewOpen(false);
-  };
-
   const [formData, setFormData] = useState({
     title: "",
     image: null,
@@ -28,15 +20,28 @@ const NewBlog = () => {
     trending: false,
   });
 
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [focusedContentIndex, setFocusedContentIndex] = useState(null);
+
+  const openPreview = () => {
+    if (formData.image) {
+      setIsPreviewOpen(true);
+    } else {
+      setErrorMessage("please upload an image");
+      setSuccessMessage("error");
+    }
+  };
+
+  const closePreview = () => {
+    setIsPreviewOpen(false);
+  };
+
   const getContentRefs = () => {
     return formData.content.map(() => React.createRef(null));
   };
 
   const contentRefs = getContentRefs();
-
-  const [errorMessage, setErrorMessage] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
-  const [focusedContentIndex, setFocusedContentIndex] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
