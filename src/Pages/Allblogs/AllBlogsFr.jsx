@@ -109,9 +109,10 @@ export default function AllblogsFr({ blogs, error, isLoading }) {
                 <p className="text-xl font-bold truncate w-[90%] ">
                   {blog.title}
                 </p>
-                <p className="text-md text-gray-700 mt-4 truncate w-[90%] ">
-                  {blog.content[0].slice(0, 50)} ...
-                </p>
+                <p
+                  className="text-md text-gray-700 mt-4 truncate w-[90%] "
+                  dangerouslySetInnerHTML={{ __html: blog.content[0] }}
+                ></p>
                 <img
                   src={blog.image}
                   alt=""
@@ -149,9 +150,10 @@ export default function AllblogsFr({ blogs, error, isLoading }) {
                   {blog.Title}
                 </p>
 
-                <p className="text-md text-gray-700 mt-4 truncate w-[90%]">
-                  {textContent.slice(0, 50)} ...
-                </p>
+                <p
+                  className="text-md text-gray-700 mt-4 truncate w-[90%] "
+                  dangerouslySetInnerHTML={{ __html: textContent }}
+                ></p>
                 {imageElement && (
                   <img
                     src={imageElement.src}

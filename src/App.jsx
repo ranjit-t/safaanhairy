@@ -7,44 +7,62 @@ import Allblogs from "./Pages/Allblogs/Allblogs";
 import Singleblog from "./Pages/Singleblog/Singleblog";
 import NewBlog from "./Pages/NewBlog/NewBlog";
 import useFetchBlogs from "./Util/Hooks/useFetchBlogs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ChooseLang from "./Pages/ChooseLang";
 import AllblogsFr from "./Pages/Allblogs/AllBlogsFr";
 import ContactFr from "./Pages/Contactpage/ContactFr";
 import HomepageFr from "./Pages/HomepageFr/HomepageFr";
 import useFetchOldBlogs from "./Util/Hooks/useFetchOldBlogs";
+import uk from "./Images/uk.png";
+import fr from "./Images/fr.png";
 
 function App() {
   const { blogs, loading, error } = useFetchBlogs();
   const { oldBlogsFireStore } = useFetchOldBlogs();
 
-  const initialLanguage = location.pathname.startsWith("/fr")
-    ? "French"
-    : "English";
+  const isFrench = window.location.pathname.startsWith("/fr");
+  const isEnglish = window.location.pathname.startsWith("/en");
+
+  let initialLanguage;
+  if (isFrench) {
+    initialLanguage = "French";
+  } else if (isEnglish) {
+    initialLanguage = "English";
+  } else if (localStorage.getItem("Safaa-Nhairy-Site-Language")) {
+    initialLanguage = JSON.parse(
+      localStorage.getItem("Safaa-Nhairy-Site-Language")
+    );
+  } else {
+    location.href = "/";
+  }
 
   const [language, setLanguage] = useState(initialLanguage);
 
-  // Function to handle language change
-  const handleLanguageChange = (e) => {
-    const selectedLanguage = e.target.value;
-    setLanguage(selectedLanguage);
+  useEffect(() => {
+    localStorage.removeItem("Safaa-Nhairy-Site-Language");
+    localStorage.setItem(
+      "Safaa-Nhairy-Site-Language",
+      JSON.stringify(language)
+    );
+  }, [language]);
 
-    // Get the current pathname
-    const currentPath = window.location.pathname;
+  const handleLanguageChange = (lang) => {
+    if (lang !== language) {
+      setLanguage(lang);
+      localStorage.setItem("Safaa-Nhairy-Site-Language", JSON.stringify(lang));
 
-    // Determine the new path based on the selected language
-    let newPath = currentPath;
-    if (currentPath.startsWith("/en") && selectedLanguage === "French") {
-      newPath = currentPath.replace("/en", "/fr");
-    } else if (
-      currentPath.startsWith("/fr") &&
-      selectedLanguage === "English"
-    ) {
-      newPath = currentPath.replace("/fr", "/en");
+      const currentPath = window.location.pathname;
+      let newPath = currentPath;
+
+      if (currentPath.startsWith("/en") && lang === "French") {
+        newPath = currentPath.replace("/en", "/fr");
+      } else if (currentPath.startsWith("/fr") && lang === "English") {
+        newPath = currentPath.replace("/fr", "/en");
+      }
+
+      // Navigate to the new path
+      location.href = newPath;
     }
-
-    // Navigate to the new path
-    location.href = newPath;
   };
 
   return (
@@ -61,7 +79,8 @@ function App() {
               }
             />
           </div>
-          <div className="flex nav-bar-in-header">
+
+          <div className="flex items-center mr-2">
             <NavLink
               className="nav-link"
               to={language === "English" ? "/en/blogs" : "/fr/blogs"}
@@ -74,20 +93,33 @@ function App() {
             >
               Contact
             </NavLink>
-
-            <div className="ml-4">
-              <select value={language} onChange={handleLanguageChange}>
-                <option value="English">En 🇬🇧</option>
-                <option value="French">Fr 🇫🇷</option>
-              </select>
-            </div>
           </div>
         </div>
-        <div className="w-full">
-          <p className="py-2 px-6 text-[12px] sm:text-[16px] shadow-md mb-2 -mt-4">
+        <div className="w-screen flex justify-between shadow-md">
+          <p className="py-2 px-6 text-[12px] sm:text-[16px] mb-2 -mt-4">
             Entrepreneurship, Communications & Leadership
           </p>
-          <hr />
+          <div className="ml-4 mr-4 ">
+            {language === "French" ? (
+              <img
+                src={uk}
+                alt="EN"
+                className="w-[30px]  cursor-pointer"
+                onClick={() => {
+                  handleLanguageChange("English");
+                }}
+              />
+            ) : (
+              <img
+                src={fr}
+                alt="FR"
+                className="w-[30px]  cursor-pointer"
+                onClick={() => {
+                  handleLanguageChange("French");
+                }}
+              />
+            )}
+          </div>
         </div>
         <Routes>
           <Route path="/" element={<ChooseLang setLanguage={setLanguage} />} />

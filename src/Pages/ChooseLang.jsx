@@ -43,6 +43,7 @@ export default function ChooseLang({ setLanguage }) {
           <button
             onClick={() => {
               setLanguage("English");
+
               navigate("/en");
             }}
             className="bg-[#F4E0B9]  hover:scale-105 rounded-full px-4 py-2"
@@ -52,6 +53,7 @@ export default function ChooseLang({ setLanguage }) {
           <button
             onClick={() => {
               setLanguage("French");
+
               navigate("/fr");
             }}
             className="bg-[#F4E0B9] hover:scale-105 rounded-full px-4 py-2"

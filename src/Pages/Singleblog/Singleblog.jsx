@@ -160,11 +160,13 @@ export default function Singleblog({
 
     return (
       <div>
-        <img
-          src={blog.image}
-          alt={`blog${id}`}
-          className="w-full max-h-[550px] object-cover"
-        />
+        <div className="flex justify-center">
+          <img
+            src={blog.image}
+            alt={`blog${id}`}
+            className="max-h-[550px] object-cover"
+          />
+        </div>
 
         <PageHeader css="mt-16 mb-10">{blog.title}</PageHeader>
 
