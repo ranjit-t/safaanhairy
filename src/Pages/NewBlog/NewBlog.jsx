@@ -1,12 +1,23 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import PageHeader from "../../GlobalUI/PageHeader";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { storage, db } from "../../FireBase/config.js";
 import { doc, setDoc } from "firebase/firestore";
 import PostPermission from "./PostPermission";
+import BlogPreview from "./BlogPreview";
 
 const NewBlog = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false); // State to track preview popup
+
+  const openPreview = () => {
+    setIsPreviewOpen(true);
+  };
+
+  const closePreview = () => {
+    setIsPreviewOpen(false);
+  };
 
   const [formData, setFormData] = useState({
     title: "",
@@ -170,7 +181,7 @@ const NewBlog = () => {
 
   if (isLoggedIn) {
     return (
-      <div className="p-4">
+      <div className="p-4 relative">
         <PageHeader>New Blog</PageHeader>
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
           <div className="mb-4">
@@ -300,6 +311,20 @@ const NewBlog = () => {
             Submit
           </button>
         </form>
+        <div className="flex justify-center my-4">
+          <button
+            onClick={openPreview}
+            className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+          >
+            Preview
+          </button>
+        </div>
+
+        {isPreviewOpen && (
+          <div className="preview-popup">
+            <BlogPreview blog={formData} closePreview={closePreview} />
+          </div>
+        )}
       </div>
     );
   }
