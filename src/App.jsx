@@ -29,14 +29,14 @@ function App() {
     initialLanguage = "French";
   } else if (isEnglish) {
     initialLanguage = "English";
-  } else if (localStorage.getItem("Safaa-Nhairy-Site-Language")) {
-    initialLanguage = JSON.parse(
-      localStorage.getItem("Safaa-Nhairy-Site-Language")
-    );
   } else {
-    location.href = "/";
+    let locallyStoredLang = localStorage.getItem("Safaa-Nhairy-Site-Language");
+    if (locallyStoredLang !== undefined) {
+      initialLanguage = JSON.parse(locallyStoredLang);
+    } else {
+      initialLanguage = "English";
+    }
   }
-
   const [language, setLanguage] = useState(initialLanguage);
 
   useEffect(() => {
