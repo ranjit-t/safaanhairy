@@ -12,15 +12,15 @@ export default function Homepage() {
       <img
         src={Banner}
         alt="Vivre De Sa Passion"
-        className="w-full max-h-[500px] box-design"
+        className="w-full min-h-[200px] max-h-[500px] box-design object-cover"
       />
       <div className="bg-[#F4E0B9]  text-lg  flex flex-col md:flex-row items-center justify-evenly  w-screen px-[10vw] py-10 gap-6 box-design">
-        <div className="max-w-[250px] md:max-w-[350px] ">
+        <div className="max-w-[200px] md:max-w-[350px] ">
           <img src={Portrait} alt="Portait" className=" " />
         </div>
         <div className="max-w-[450px]">
           <p>Hey,</p>
-          <p className="my-6 mt-4">
+          <p className="my-6 mt-4 text-justify">
             I am Safaa Nhairy. Ever since I can remember, I have always been
             passionate about communications and creating and building projects.
             Today, we call that ‘entrepreneurship’. I am also driven by the love
@@ -41,7 +41,7 @@ export default function Homepage() {
           Courses
         </h1>
         <div className="flex flex-col md:flex-row items-center justify-evenly md:gap-16 px-[10vw] ">
-          <div className="max-w-[450px]">
+          <div className="max-w-[450px] text-justify">
             <p className="">
               SN School is an online learning platform for people looking to
               achieve Success Now!!

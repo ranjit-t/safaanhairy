@@ -12,15 +12,15 @@ export default function HomepageFr() {
       <img
         src={Banner}
         alt="Vivre De Sa Passion"
-        className="w-full max-h-[500px] box-design"
+        className="w-full min-h-[200px] max-h-[500px] box-design object-cover"
       />
       <div className="bg-[#F4E0B9]  text-lg  flex flex-col md:flex-row items-center justify-evenly  w-screen px-[10vw] py-10 gap-6 box-design">
-        <div className="max-w-[400px]">
+        <div className="max-w-[200px] md:max-w-[350px] ">
           <img src={Portrait} alt="Portait" />
         </div>
         <div className="max-w-[450px]">
           <p>Bonjour,</p>
-          <p className="my-6 mt-4">
+          <p className="my-6 mt-4 text-justify">
             Je m'appelle Safaa Nhairy. Depuis que je suis tout petit, j'ai
             toujours été passionné par la communication, la création et la
             réalisation de projets. Aujourd'hui, nous appelons cela
@@ -42,7 +42,7 @@ export default function HomepageFr() {
           Cours
         </h1>
         <div className="flex flex-col md:flex-row items-center justify-evenly md:gap-16 px-[10vw] ">
-          <div className="max-w-[450px]">
+          <div className="max-w-[450px] text-justify">
             <p className="">
               L'école SN est une plateforme d'apprentissage en ligne pour les
               personnes cherchant à réussir dès maintenant !!
