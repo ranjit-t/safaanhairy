@@ -78,8 +78,8 @@ export default function AllblogsFr({ blogs, error, isLoading }) {
       <div className="flex justify-center mt-4 relative">
         <input
           type="text"
-          placeholder="rechercher un blog"
-          className="border border-1 border-gray-600 px-4 py-1 rounded-full text-lg w-[200px] text-gray-700"
+          placeholder="Rechercher un blog"
+          className="border border-2 border-gray-600 px-4 py-2 rounded-full text-lg text-[25hpx] w-[250px] text-gray-700"
           onChange={handleChange}
         />
       </div>
@@ -91,7 +91,7 @@ export default function AllblogsFr({ blogs, error, isLoading }) {
       >
         <img src={uparrow} alt="UP" className=" w-8 sm:w-10" />
       </div>
-      <div className="flex  items-center justify-center flex-wrap  bg-[#F4E0B9] p-4 mt-4 min-h-[550px]">
+      <div className="flex  items-center justify-center flex-wrap  bg-[#F4E0B9] p-4 mt-4 min-h-[550px] box-design">
         {filteredBlogs.length === 0 && filteredOldBlogs.length === 0 && (
           <p>Désolé, rien trouvé</p>
         )}

@@ -7,11 +7,11 @@ import Man4 from "../../Images/Man4.png";
 
 export default function PhotoGallery() {
   return (
-    <div className="bg-[#F4E0B9] py-16 w-full">
+    <div className="bg-[#F4E0B9] py-16 w-full box-design">
       <h2 className="text-5xl text-center mb-16">
         La vie, c'est avec qui on passe du temps...
       </h2>
-      <div className="flex flex-row flex-wrap justify-center gap-4   w-screen px-[15vw]">
+      <div className="flex flex-row flex-wrap justify-center gap-4   w-screen px-[15vw] ">
         {[
           { src: Thami, alt: "Thami" },
           { src: John, alt: "John" },

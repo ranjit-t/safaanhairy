@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Form() {
   return (
-    <div className="bg-[#F4E0B9] p-10 text-center w-screen px-[10vw] ">
+    <div className="bg-[#F4E0B9] p-10 text-center w-screen px-[10vw]  box-design">
       <h2 className="text-3xl font-bold mb-4 ">Join Our Community!</h2>
       <p className="mb-4">
         Subscribe to my newsletter and never miss an update from me!

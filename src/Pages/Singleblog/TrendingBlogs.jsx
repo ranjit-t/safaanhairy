@@ -13,7 +13,7 @@ export default function TrendingBlogs({ blogs, language }) {
           ? "You might also like"
           : "Vous pourriez aussi aimer"}
       </h3>
-      <div className="flex  items-center   overflow-x-scroll overflow-y-hidden bg-[#F4E0B9] p-4 h-[500px] mt-4">
+      <div className="flex  items-center   overflow-x-scroll overflow-y-hidden bg-[#F4E0B9] p-4 h-[500px] mt-4 box-design">
         {trendingBlogs.map((blog, idx) => {
           return (
             <div

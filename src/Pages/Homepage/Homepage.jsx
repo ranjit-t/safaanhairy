@@ -1,18 +1,22 @@
 import React from "react";
-import Book from "../../Images/Book.png";
 import Portrait from "../../Images/Portrait.png";
 import PhotoGallery from "./PhotoGallery";
 import VideoIntro from "./VideoIntro";
 import Form from "./Form.Jsx";
 import AsSeenIn from "./AsSeenIn";
+import Banner from "../../Images/Banner1280x500.jpg";
 
 export default function Homepage() {
   return (
     <div className="flex flex-col items-center w-screen">
-      <img src={Book} alt="Vivre De Sa Passion" className="w-full" />
-      <div className="bg-[#F4E0B9]  text-lg  flex flex-col md:flex-row items-center justify-evenly  w-screen px-[10vw] py-10 gap-6">
-        <div className="max-w-[400px]">
-          <img src={Portrait} alt="Portait" />
+      <img
+        src={Banner}
+        alt="Vivre De Sa Passion"
+        className="w-full max-h-[500px] box-design"
+      />
+      <div className="bg-[#F4E0B9]  text-lg  flex flex-col md:flex-row items-center justify-evenly  w-screen px-[10vw] py-10 gap-6 box-design">
+        <div className="max-w-[250px] md:max-w-[350px] ">
+          <img src={Portrait} alt="Portait" className=" " />
         </div>
         <div className="max-w-[450px]">
           <p>Hey,</p>
@@ -24,14 +28,14 @@ export default function Homepage() {
             entrepreneurs to design a successful career path and business.
             Welcome to this space!
           </p>
-          <p className="text-2xl font-bold">
+          <p className="text-2xl font-bold ">
             Safaa Nhairy - Entrepreneur Guide
           </p>
         </div>
       </div>
 
       {/* Courses  */}
-      <div className="my-10">
+      <div className="my-10 ">
         {" "}
         <h1 className="text-4xl font-bold text-center mb-10 specialFont">
           Courses

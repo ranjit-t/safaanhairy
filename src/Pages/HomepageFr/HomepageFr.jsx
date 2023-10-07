@@ -1,16 +1,20 @@
 import React from "react";
-import Book from "../../Images/Book.png";
 import Portrait from "../../Images/Portrait.png";
 import PhotoGallery from "./PhotoGallery";
 import VideoIntro from "./VideoIntro";
 import Form from "./Form.Jsx";
 import AsSeenIn from "./AsSeenIn";
+import Banner from "../../Images/Banner1280x500.jpg";
 
 export default function HomepageFr() {
   return (
     <div className="flex flex-col items-center w-screen">
-      <img src={Book} alt="Vivre De Sa Passion" className="w-full" />
-      <div className="bg-[#F4E0B9]  text-lg  flex flex-col md:flex-row items-center justify-evenly  w-screen px-[10vw] py-10 gap-6">
+      <img
+        src={Banner}
+        alt="Vivre De Sa Passion"
+        className="w-full max-h-[500px] box-design"
+      />
+      <div className="bg-[#F4E0B9]  text-lg  flex flex-col md:flex-row items-center justify-evenly  w-screen px-[10vw] py-10 gap-6 box-design">
         <div className="max-w-[400px]">
           <img src={Portrait} alt="Portait" />
         </div>

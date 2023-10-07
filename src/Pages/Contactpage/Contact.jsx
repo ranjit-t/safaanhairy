@@ -64,7 +64,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="w-[80vw] max-w-[480px] mx-auto flex flex-col items-center">
+    <div className="w-[80vw] max-w-[480px] mx-auto flex flex-col items-center ">
       <PageHeader css="specialFont">Contact Me</PageHeader>
       <p className="text-lg text-center my-10">
         For business partnerships or collaborations or just to say hello, please
@@ -73,7 +73,7 @@ export default function Contact() {
       <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className="bg-[#F4E0B9] w-screen flex flex-col items-center mt-4 py-10"
+        className="bg-[#F4E0B9] w-screen flex flex-col items-center mt-4 py-10  box-design"
       >
         <div className="">
           <p className="my-2">Your Name :</p>

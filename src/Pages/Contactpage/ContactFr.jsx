@@ -72,7 +72,7 @@ export default function ContactFr() {
       <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className="bg-[#F4E0B9] w-screen flex flex-col items-center mt-4 py-10"
+        className="bg-[#F4E0B9] w-screen flex flex-col items-center mt-4 py-10  box-design"
       >
         <div className="">
           <p className="my-2">Votre nom :</p>

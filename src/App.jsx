@@ -15,7 +15,7 @@ import HomepageFr from "./Pages/HomepageFr/HomepageFr";
 import useFetchOldBlogs from "./Util/Hooks/useFetchOldBlogs";
 import uk from "./Images/uk.png";
 import fr from "./Images/fr.png";
-import BlogPreview from "./Pages/NewBlog/BlogPreview";
+import Footer from "./GlobalUI/Footer";
 
 function App() {
   const { blogs, loading, error } = useFetchBlogs();
@@ -129,7 +129,7 @@ function App() {
           <Route path="/en/contact" element={<Contact />} />
           <Route path="/fr/contact" element={<ContactFr />} />
           <Route path="/publish-article" element={<NewBlog />} />
-          {/* <Route path="/blog-preview" element={<BlogPreview />} /> */}
+
           <Route
             path="/en/blogs"
             element={
@@ -158,11 +158,12 @@ function App() {
           <Route path="*" element={<Notfound />} />
         </Routes>
       </BrowserRouter>
-      <div className="flex justify-center  mt-14">
+      <Footer />
+      {/* <div className="flex justify-center  mt-14">
         <p className="text-center absolute bottom-4 text-[12px]">
           Developed by Ranjit T
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }

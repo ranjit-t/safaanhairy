@@ -200,88 +200,93 @@ export default function Singleblog({
               : "Article publié par Safaa Nhairy"}
           </p>
         </div>
-        <h3 className="text-xl font-bold mb-4 px-[5vw] sm:px-[15vw] decoration-solid underline decoration-black underline-offset-4">
-          {language === "English" ? "Comments :" : "Commentaires :"}
-        </h3>
+        <hr className="mb-8" />
         <div className="">
-          <div className="text-left  pt-1">
-            {blog.comments.length > 0 ? (
-              blog.comments.map((comment, idx) => {
-                return (
-                  <div
-                    key={idx}
-                    className="my-4 py-4 px-[5vw] sm:px-[15vw] relative"
-                  >
-                    <span className="font-bold">{comment.name} :</span>
-                    <span className="text-gray-600"> {comment.comment}</span>
-                    <span className="text-[10px] text-gray-400 absolute right-[5vw] sm:right-[15vw] bottom-4">
-                      {comment.time}
-                    </span>
-                    <hr className="mt-4" />
-                  </div>
-                );
-              })
-            ) : (
-              <div className="my-4 py-4 px-[5vw] sm:px-[15vw] ">
-                <p className="mb-4 text-gray-600">
-                  {language === "English"
-                    ? "No Comments Yet"
-                    : "Pas encore de commentaires"}
-                </p>
-                <hr className="mt-2" />
-              </div>
-            )}
-          </div>
-          <div className=" p-4 flex flex-col items-center">
-            <h3 className="text-xl mb-4">
-              {language === "English"
-                ? "Add a comment"
-                : "Ajouter un commentaire"}
-            </h3>
-            <form
-              className="flex flex-col gap-2 items-center justiy-center w-screen"
-              onSubmit={handleCommentSubmit}
-            >
-              <textarea
-                placeholder={
-                  language === "English" ? "Your comment" : "Votre commentaire"
-                }
-                className="flex-grow border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 h-16 w-[80vw] sm:w-[400px]"
-                value={comment}
-                onChange={(e) => setComment(e.target.value)}
-                required
-              />
-              <input
-                type="text"
-                placeholder={
-                  language === "English" ? "Your last name" : "Votre nom"
-                }
-                className=" border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 w-[80vw] sm:w-[400px]"
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-                required
-              />
-              <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey="6LeMb3YoAAAAAL0EULE9WK5pgHEYV17Dv_DTS5WN" // Replace with your reCAPTCHA Site Key
-              />
-
-              {message && (
-                <p
-                  className={
-                    message.startsWith("Oops")
-                      ? "text-red-500"
-                      : "text-green-600"
-                  }
-                >
-                  {message}
-                </p>
+          <h3 className="text-xl font-bold mb-1 px-[5vw] sm:px-[15vw] decoration-solid underline decoration-black underline-offset-4">
+            {language === "English" ? "Comments :" : "Commentaires :"}
+          </h3>
+          <div className="">
+            <div className="text-left  pt-1">
+              {blog.comments.length > 0 ? (
+                blog.comments.map((comment, idx) => {
+                  return (
+                    <div
+                      key={idx}
+                      className="my-4 py-4 px-[5vw] sm:px-[15vw] relative"
+                    >
+                      <span className="font-bold">{comment.name} :</span>
+                      <span className="text-gray-600"> {comment.comment}</span>
+                      <span className="text-[10px] text-gray-400 absolute right-[5vw] sm:right-[15vw] bottom-4">
+                        {comment.time}
+                      </span>
+                      <hr className="mt-4" />
+                    </div>
+                  );
+                })
+              ) : (
+                <div className="my-4 py-4 px-[5vw] sm:px-[15vw] ">
+                  <p className="mb-4 text-gray-600">
+                    {language === "English"
+                      ? "No Comments Yet"
+                      : "Pas encore de commentaires"}
+                  </p>
+                  <hr className="mt-2" />
+                </div>
               )}
+            </div>
+            <div className=" p-4 flex flex-col items-center ">
+              <h3 className="text-xl mb-4">
+                {language === "English"
+                  ? "Add a comment"
+                  : "Ajouter un commentaire"}
+              </h3>
+              <form
+                className="flex flex-col gap-2 items-center justiy-center w-screen"
+                onSubmit={handleCommentSubmit}
+              >
+                <textarea
+                  placeholder={
+                    language === "English"
+                      ? "Your comment"
+                      : "Votre commentaire"
+                  }
+                  className="flex-grow border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 h-16 w-[80vw] sm:w-[400px]"
+                  value={comment}
+                  onChange={(e) => setComment(e.target.value)}
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder={
+                    language === "English" ? "Your last name" : "Votre nom"
+                  }
+                  className=" border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 w-[80vw] sm:w-[400px]"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  required
+                />
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey="6LeMb3YoAAAAAL0EULE9WK5pgHEYV17Dv_DTS5WN" // Replace with your reCAPTCHA Site Key
+                />
 
-              <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-fit">
-                {language === "English" ? "Submit" : "Ajoutez"}
-              </button>
-            </form>
+                {message && (
+                  <p
+                    className={
+                      message.startsWith("Oops")
+                        ? "text-red-500"
+                        : "text-green-600"
+                    }
+                  >
+                    {message}
+                  </p>
+                )}
+
+                <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-fit">
+                  {language === "English" ? "Submit" : "Ajoutez"}
+                </button>
+              </form>
+            </div>
           </div>
         </div>
 

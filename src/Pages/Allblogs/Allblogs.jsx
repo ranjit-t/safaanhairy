@@ -81,20 +81,20 @@ export default function Allblogs({ blogs, isLoading, error }) {
       <div className="flex justify-center mt-4 relative">
         <input
           type="text"
-          placeholder="search a blog"
-          className="border border-1 border-gray-600 px-4 py-1 rounded-full text-lg w-[150px] text-gray-700"
+          placeholder="Search a blog"
+          className="border border-2 border-gray-600 px-4 py-2 rounded-full text-lg text-[25hpx] w-[250px] text-gray-700"
           onChange={handleChange}
         />
       </div>
       <div
-        className="fixed bottom-[5vh] right-[1vw] sm:right-[3vw] bg-white p-2 rounded-full cursor-pointer shadow-lg z-60"
+        className="fixed bottom-[5vh] right-[1vw] sm:right-[3vw] bg-white p-2 rounded-full cursor-pointer shadow-lg z-60 "
         onClick={() => {
           window.scrollTo(0, 0);
         }}
       >
         <img src={uparrow} alt="UP" className=" w-8 sm:w-10" />
       </div>
-      <div className="flex  items-center justify-center flex-wrap  bg-[#F4E0B9] p-4 mt-4 min-h-[550px]">
+      <div className="flex  items-center justify-center flex-wrap  bg-[#F4E0B9] p-4 mt-4 min-h-[550px] box-design">
         {filteredBlogs.length === 0 && filteredOldBlogs.length === 0 && (
           <p>Sorry, Nothing Found</p>
         )}
@@ -103,7 +103,7 @@ export default function Allblogs({ blogs, isLoading, error }) {
           return (
             <div
               key={idx}
-              className="flex flex-col items-center justify-center p-8 m-4  rounded-lg cursor-pointer w-[80vw] sm:w-[480px] bg-white shadow-md h-[450px]"
+              className="flex flex-col items-center justify-center p-8 m-4  rounded-lg cursor-pointer w-[80vw] sm:w-[480px] bg-white shadow-md h-[450px] "
               onClick={() => {
                 navigate(`/blog/${blog.blogID}`);
               }}
@@ -142,7 +142,7 @@ export default function Allblogs({ blogs, isLoading, error }) {
           return (
             <div
               key={idx}
-              className="flex flex-col items-center justify-center p-8 m-4  rounded-lg cursor-pointer w-[80vw] sm:w-[480px] bg-white shadow-md  h-[450px]"
+              className="flex flex-col items-center justify-center p-8 m-4  rounded-lg cursor-pointer w-[80vw] sm:w-[480px] bg-white shadow-md  h-[450px] "
               onClick={() => {
                 navigate(`/blog/${blog.ID}`);
               }}
