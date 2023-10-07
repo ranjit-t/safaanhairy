@@ -159,7 +159,7 @@ export default function Singleblog({
     const youtubeVideoID = extractYoutubeVideoID(blog.videoURL);
 
     return (
-      <div>
+      <div className="mx-auto w-screen">
         <div className="flex justify-center">
           <img
             src={blog.image}
@@ -170,7 +170,6 @@ export default function Singleblog({
 
         <PageHeader css="mt-16 mb-10">{blog.title}</PageHeader>
 
-        {/* Check if blog has a videoURL and a valid YouTube video ID */}
         {blog.videoURL && youtubeVideoID && (
           <div className="w-screen mt-4">
             <iframe
@@ -182,8 +181,8 @@ export default function Singleblog({
           </div>
         )}
 
-        <div className="w-screen px-[10vw] pb-8 leading-8 text-justify">
-          {blog.content.map((para, index) => {
+        <div className=" pb-8 leading-8 text-justify">
+          {/* {blog.content.map((para, index) => {
             return (
               <div
                 dangerouslySetInnerHTML={{ __html: para }}
@@ -191,7 +190,10 @@ export default function Singleblog({
                 className="py-4"
               ></div>
             );
-          })}
+          })} */}
+          <div className="w-screen px-[10vw] pt-8 leading-8 text-justify flex justify-center oldBlog">
+            <div dangerouslySetInnerHTML={{ __html: blog.content }} />
+          </div>
           <p className="text-lg font-bold mt-10 text-center">
             {language === "English"
               ? "Article Published by Safaa Nhairy"
@@ -203,7 +205,6 @@ export default function Singleblog({
         </h3>
         <div className="">
           <div className="text-left  pt-1">
-            {/* <span className="pb-2">Hey</span> */}
             {blog.comments.length > 0 ? (
               blog.comments.map((comment, idx) => {
                 return (

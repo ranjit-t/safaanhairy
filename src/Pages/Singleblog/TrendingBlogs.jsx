@@ -25,8 +25,8 @@ export default function TrendingBlogs({ blogs, language }) {
             >
               <div className="w-full flex flex-col items-center justify-center">
                 <p className="text-xl font-bold ">{blog.title}</p>
-                <p className="text-md text-gray-700 mt-4">
-                  {blog.content[0].slice(0, 50)} ...
+                <p className="text-md text-gray-700 mt-4 truncate  w-[45vw] sm:w-[300px]">
+                  {htmlToPlainText(blog.content)}
                 </p>
                 <img
                   src={blog.image}
@@ -40,4 +40,10 @@ export default function TrendingBlogs({ blogs, language }) {
       </div>
     </div>
   );
+}
+
+function htmlToPlainText(html) {
+  const tempDiv = document.createElement("div");
+  tempDiv.innerHTML = html;
+  return tempDiv.textContent || tempDiv.innerText || "";
 }

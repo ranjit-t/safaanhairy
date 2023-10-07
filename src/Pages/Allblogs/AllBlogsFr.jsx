@@ -109,10 +109,9 @@ export default function AllblogsFr({ blogs, error, isLoading }) {
                 <p className="text-xl font-bold truncate w-[90%] ">
                   {blog.title}
                 </p>
-                <p
-                  className="text-md text-gray-700 mt-4 truncate w-[90%] "
-                  dangerouslySetInnerHTML={{ __html: blog.content[0] }}
-                ></p>
+                <p className="text-md text-gray-700 mt-4 truncate w-[90%] ">
+                  {htmlToPlainText(blog.content)}
+                </p>
                 <img
                   src={blog.image}
                   alt=""
@@ -175,4 +174,10 @@ export default function AllblogsFr({ blogs, error, isLoading }) {
       </div>
     </div>
   );
+}
+
+function htmlToPlainText(html) {
+  const tempDiv = document.createElement("div");
+  tempDiv.innerHTML = html;
+  return tempDiv.textContent || tempDiv.innerText || "";
 }

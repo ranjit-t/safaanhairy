@@ -15,6 +15,7 @@ import HomepageFr from "./Pages/HomepageFr/HomepageFr";
 import useFetchOldBlogs from "./Util/Hooks/useFetchOldBlogs";
 import uk from "./Images/uk.png";
 import fr from "./Images/fr.png";
+import BlogPreview from "./Pages/NewBlog/BlogPreview";
 
 function App() {
   const { blogs, loading, error } = useFetchBlogs();
@@ -128,6 +129,7 @@ function App() {
           <Route path="/en/contact" element={<Contact />} />
           <Route path="/fr/contact" element={<ContactFr />} />
           <Route path="/publish-article" element={<NewBlog />} />
+          {/* <Route path="/blog-preview" element={<BlogPreview />} /> */}
           <Route
             path="/en/blogs"
             element={

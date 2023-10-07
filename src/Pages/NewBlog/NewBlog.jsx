@@ -28,20 +28,22 @@ const NewBlog = () => {
 
   const openPreview = () => {
     if (formData.image) {
+      setErrorMessage("");
       setIsPreviewOpen(true);
     } else {
-      setErrorMessage("please upload an image");
+      setErrorMessage("please upload an image to preview");
     }
   };
 
   const closePreview = () => {
+    setErrorMessage("");
     setIsPreviewOpen(false);
   };
 
-  const [state, setState] = React.useState({ value: null });
+  // const [state, setState] = React.useState({ value: null });
   const handleChange = (value) => {
-    setState({ value });
-    console.log(value);
+    // setState({ value });
+    // console.log(value);
     setFormData({
       ...formData,
       content: value,
@@ -76,6 +78,8 @@ const NewBlog = () => {
     // Clear any previous error or success messages
     setErrorMessage("");
     setSuccessMessage("");
+
+    setIsPreviewOpen(false);
 
     try {
       // Reference to Firebase Storage bucket
@@ -138,7 +142,7 @@ const NewBlog = () => {
 
   if (isLoggedIn) {
     return (
-      <div className="p-4 relative">
+      <div className="p-4 relative w-screen overflow-x-hidden">
         <PageHeader>New Blog</PageHeader>
         <form onSubmit={handleSubmit} className="max-w-[90vw] mx-auto">
           <div className="mb-4">
@@ -192,7 +196,7 @@ const NewBlog = () => {
               <div className="max-w-[90vw]  my-8 mb-16">
                 <ReactQuill
                   theme="snow"
-                  value={state.value}
+                  value={formData.content}
                   onChange={handleChange}
                   placeholder={"Write something awesome..."}
                   modules={modules}
@@ -282,14 +286,25 @@ const NewBlog = () => {
             Submit
           </button>
         </form>
-        <div className="flex justify-center my-4">
-          <button
-            onClick={openPreview}
-            className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-          >
-            Preview
-          </button>
-        </div>
+        {isPreviewOpen ? (
+          <div className="flex justify-center my-4">
+            <button
+              onClick={closePreview}
+              className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+            >
+              Close Preview
+            </button>
+          </div>
+        ) : (
+          <div className="flex justify-center my-4">
+            <button
+              onClick={openPreview}
+              className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            >
+              Open Preview
+            </button>
+          </div>
+        )}
 
         {isPreviewOpen && (
           <div className="preview-popup">

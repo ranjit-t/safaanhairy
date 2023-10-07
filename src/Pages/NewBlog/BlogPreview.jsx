@@ -8,8 +8,8 @@ const BlogPreview = ({ blog, closePreview }) => {
   console.log(blog);
 
   return (
-    <div className="absolute top-0  bg-transparent w-full bg-gray-200 py-10 mb-24">
-      <div className="bg-white  flex flex-col mx-auto items-center py-6">
+    <div className="bg-white  w-[90vw] mx-auto  py-10 mb-24  box-design ">
+      <div className="bg-white  flex flex-col mx-auto items-center py-6 ">
         <div className="flex justify-center ">
           <img
             src={URL.createObjectURL(blog.image)}
@@ -44,7 +44,7 @@ const BlogPreview = ({ blog, closePreview }) => {
           })} */}
           <div
             dangerouslySetInnerHTML={{ __html: blog.content }}
-            className="py-4"
+            className="py-4  mx-[10vw] leading-8 text-justify flex  oldBlog"
           ></div>
           <p className="text-lg font-bold mt-10 text-center">
             {blog.language === "English"
