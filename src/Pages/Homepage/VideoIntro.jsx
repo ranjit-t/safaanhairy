@@ -4,7 +4,9 @@ import Safaa from "../../Images/safaaIcon.jpeg";
 export default function VideoIntro() {
   return (
     <div className="bg-black text-white my-8 py-8 gap-8 flex flex-col items-center w-full">
-      <h1 className="text-2xl font-[700] specialFont">The World Needs You</h1>
+      <h1 className="text-[32px] text-center  text-white  specialFont">
+        The World Needs You
+      </h1>
 
       <div className="w-[90%] md:w-[50%] md:max-w-[500px] border border-[12px] border-white rounded-lg h-[283px]">
         <iframe

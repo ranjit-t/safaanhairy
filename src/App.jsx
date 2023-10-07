@@ -25,18 +25,15 @@ function App() {
   const isEnglish = window.location.pathname.startsWith("/en");
 
   let initialLanguage;
+
   if (isFrench) {
     initialLanguage = "French";
   } else if (isEnglish) {
     initialLanguage = "English";
   } else {
-    let locallyStoredLang = localStorage.getItem("Safaa-Nhairy-Site-Language");
-    if (locallyStoredLang !== undefined) {
-      initialLanguage = JSON.parse(locallyStoredLang);
-    } else {
-      initialLanguage = "English";
-    }
+    initialLanguage = "English";
   }
+
   const [language, setLanguage] = useState(initialLanguage);
 
   useEffect(() => {

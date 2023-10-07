@@ -10,9 +10,9 @@ import Yannick from "../../Images/Yannick.jpeg";
 export default function PhotoGallery() {
   return (
     <div className="bg-[#F4E0B9] py-16 w-full  box-design">
-      <h2 className="text-5xl text-center mb-16">
+      <h1 className="text-[32px] text-center mb-16 text-black ">
         Life is who you spend time with...
-      </h2>
+      </h1>
       <div className="flex flex-row flex-wrap justify-center gap-4   w-screen px-[15vw]">
         {[
           { src: Thami, alt: "Thami Kabbaj" },
