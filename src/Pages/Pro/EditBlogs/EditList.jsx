@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
-export default function EditList({ error, loading, blogs }) {
+export default function EditList({ error, loading, blogs, signedUser }) {
   const [search, setSearch] = useState("");
 
   const [pageLoading, setpageLoading] = useState(true);
@@ -38,6 +38,20 @@ export default function EditList({ error, loading, blogs }) {
     return (
       <div className="h-[70vh] w-screen flex flex-col items-center justify-center">
         ...Loading
+      </div>
+    );
+  } else if (!signedUser) {
+    return (
+      <div className="h-[70vh] w-screen flex flex-col items-center justify-center">
+        <p>Please Login to Access this page</p>
+        <button
+          className="bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 mt-4"
+          onClick={() => {
+            navigate("/pro-login");
+          }}
+        >
+          Login
+        </button>
       </div>
     );
   } else if (loading) {

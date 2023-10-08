@@ -164,7 +164,12 @@ function App() {
           <Route
             path="/pro-edit-blogs"
             element={
-              <EditList blogs={blogs} error={error} isLoading={loading} />
+              <EditList
+                blogs={blogs}
+                error={error}
+                isLoading={loading}
+                signedUser={signedUser}
+              />
             }
           />
           <Route
