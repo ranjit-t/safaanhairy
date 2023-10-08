@@ -22,18 +22,21 @@ export default function EditSingleBlog({
 
   const { id } = useParams();
   const pageID = id;
+  const navigate = useNavigate();
 
   const blog = blogs.find((blog) => blog.id == pageID);
 
-  //   console.log(blog);
+  // console.log(blog);
+  if (blog === undefined) {
+    navigate("/pro-edit-blogs");
+    return;
+  }
 
   useEffect(() => {
     setTimeout(() => {
       setpageLoading(false);
     }, 1000);
   }, []);
-
-  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     title: blog.title,

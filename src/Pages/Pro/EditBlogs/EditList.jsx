@@ -9,6 +9,8 @@ export default function EditList({ error, loading, blogs, signedUser }) {
     blogs.sort((a, b) => b.timePublished - a.timePublished)
   );
 
+  //   console.log(signedUser);
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -34,13 +36,14 @@ export default function EditList({ error, loading, blogs, signedUser }) {
       setpageLoading(false);
     }, 500);
   }, []);
+
   if (pageLoading) {
     return (
       <div className="h-[70vh] w-screen flex flex-col items-center justify-center">
         ...Loading
       </div>
     );
-  } else if (!signedUser) {
+  } else if (signedUser === null) {
     return (
       <div className="h-[70vh] w-screen flex flex-col items-center justify-center">
         <p>Please Login to Access this page</p>
@@ -67,6 +70,7 @@ export default function EditList({ error, loading, blogs, signedUser }) {
       </div>
     );
   }
+
   return (
     <div className="w-[90vw] mx-auto mt-8">
       <div className="flex justify-center relative">
