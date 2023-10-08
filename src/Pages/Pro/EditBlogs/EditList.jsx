@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 export default function EditList({ error, loading, blogs }) {
   const [search, setSearch] = useState("");
+
+  const [pageLoading, setpageLoading] = useState(true);
   const [filteredBlogs, setFilteredBlogs] = useState(
     blogs.sort((a, b) => b.timePublished - a.timePublished)
   );
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -24,10 +29,29 @@ export default function EditList({ error, loading, blogs }) {
     }
   }, [blogs, search]);
 
-  if (loading) {
-    return <div>...Loading</div>;
+  useEffect(() => {
+    setTimeout(() => {
+      setpageLoading(false);
+    }, 500);
+  }, []);
+  if (pageLoading) {
+    return (
+      <div className="h-[70vh] w-screen flex flex-col items-center justify-center">
+        ...Loading
+      </div>
+    );
+  } else if (loading) {
+    return (
+      <div className="h-[70vh] w-screen flex flex-col items-center justify-center">
+        ...Loading
+      </div>
+    );
   } else if (error) {
-    return <div>Sorry, there is an error</div>;
+    return (
+      <div className="h-[70vh] w-screen flex flex-col items-center justify-center">
+        Sorry, there is an error
+      </div>
+    );
   }
   return (
     <div className="w-[90vw] mx-auto mt-8">
@@ -49,6 +73,9 @@ export default function EditList({ error, loading, blogs }) {
           <div
             key={blog.blogID}
             className="flex w-[80vw] justify-center mx-auto mb-4 border-b border-1 p-2 cursor-pointer"
+            onClick={() => {
+              navigate(`/pro-edit-blogs/${blog.blogID}`);
+            }}
           >
             <p className="w-[30%]">{blog.blogID}</p>
             <p className="w-[70%] text-center">{blog.title}</p>

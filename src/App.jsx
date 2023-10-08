@@ -21,6 +21,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./FireBase/config";
 import Logout from "./Pages/Pro/Logout";
 import EditList from "./Pages/Pro/EditBlogs/EditList";
+import EditSingleBlog from "./Pages/Pro/EditBlogs/EditSingleBlog";
 
 function App() {
   const { blogs, loading, error } = useFetchBlogs();
@@ -164,6 +165,17 @@ function App() {
             path="/pro-edit-blogs"
             element={
               <EditList blogs={blogs} error={error} isLoading={loading} />
+            }
+          />
+          <Route
+            path="/pro-edit-blogs/:id"
+            element={
+              <EditSingleBlog
+                signedUser={signedUser}
+                blogs={blogs}
+                error={error}
+                isLoading={loading}
+              />
             }
           />
 

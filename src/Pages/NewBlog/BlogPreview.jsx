@@ -2,7 +2,7 @@
 import React from "react";
 import PageHeader from "../../GlobalUI/PageHeader";
 
-const BlogPreview = ({ blog, closePreview }) => {
+const BlogPreview = ({ blog, closePreview, imageURL }) => {
   const youtubeVideoID = extractYoutubeVideoID(blog.videoURL);
 
   console.log(blog);
@@ -10,12 +10,28 @@ const BlogPreview = ({ blog, closePreview }) => {
   return (
     <div className="bg-white  w-[90vw] mx-auto  py-10 mb-24  box-design ">
       <div className="bg-white  flex flex-col mx-auto items-center py-6 ">
-        <div className="flex justify-center ">
-          <img
-            src={URL.createObjectURL(blog.image)}
-            alt={`blog${blog.blogID}`}
-            className="max-h-[550px] object-cover"
-          />
+        <div className="flex justify-center">
+          {!imageURL && blog.image && (
+            <img
+              src={URL.createObjectURL(blog.image)}
+              alt={`blog${blog.blogID}`}
+              className="max-h-[550px] object-cover"
+            />
+          )}
+          {!blog.image && imageURL && (
+            <img
+              src={imageURL}
+              alt={`blog${blog.blogID}`}
+              className="max-h-[550px] object-cover"
+            />
+          )}
+          {imageURL && blog.image && (
+            <img
+              src={URL.createObjectURL(blog.image)}
+              alt={`blog${blog.blogID}`}
+              className="max-h-[550px] object-cover"
+            />
+          )}
         </div>
 
         <PageHeader css="mt-16 mb-10">{blog.title}</PageHeader>

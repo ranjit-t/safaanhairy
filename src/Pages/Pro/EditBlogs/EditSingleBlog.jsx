@@ -1,18 +1,31 @@
 import React, { useEffect, useState } from "react";
-import PageHeader from "../../GlobalUI/PageHeader";
+import { useParams } from "react-router-dom";
+
+import PageHeader from "../../../GlobalUI/PageHeader";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
-import { storage, db } from "../../FireBase/config.js";
-import { doc, setDoc } from "firebase/firestore";
-import PostPermission from "./PostPermission";
-import BlogPreview from "./BlogPreview";
+import { storage, db } from "../../../FireBase/config";
+import { doc, updateDoc } from "firebase/firestore";
+import BlogPreview from "../../NewBlog/BlogPreview";
 import ReactQuill from "react-quill";
-import EditorToolbar, { modules, formats } from "../../EditorToolbar";
+import EditorToolbar, { modules, formats } from "../../../EditorToolbar";
 import "react-quill/dist/quill.snow.css";
 import { useNavigate } from "react-router";
 
-const NewBlog = ({ signedUser }) => {
+export default function EditSingleBlog({
+  signedUser,
+  blogs,
+  error,
+  isLoading,
+}) {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false); // State to track preview popup
   const [pageLoading, setpageLoading] = useState(true);
+
+  const { id } = useParams();
+  const pageID = id;
+
+  const blog = blogs.find((blog) => blog.id == pageID);
+
+  //   console.log(blog);
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,24 +36,19 @@ const NewBlog = ({ signedUser }) => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    title: "",
+    title: blog.title,
     image: null,
-    videoURL: "",
-    content: "",
-    language: "English",
-    trending: false,
+    videoURL: blog.videoURL,
+    content: blog.content,
+    language: blog.language,
+    trending: blog.trending,
   });
 
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
-
   const openPreview = () => {
-    if (formData.image) {
-      setErrorMessage("");
-      setIsPreviewOpen(true);
-    } else {
-      setErrorMessage("please upload an image to preview");
-    }
+    setErrorMessage("");
+    setIsPreviewOpen(true);
   };
 
   const closePreview = () => {
@@ -48,7 +56,6 @@ const NewBlog = ({ signedUser }) => {
     setIsPreviewOpen(false);
   };
 
-  // const [state, setState] = React.useState({ value: null });
   const handleChange = (value) => {
     // setState({ value });
     // console.log(value);
@@ -58,12 +65,6 @@ const NewBlog = ({ signedUser }) => {
     });
   };
 
-  // const getContentRefs = () => {
-  //   return formData.content.map(() => React.createRef(null));
-  // };
-
-  // const contentRefs = getContentRefs();
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -72,14 +73,13 @@ const NewBlog = ({ signedUser }) => {
     });
   };
 
-  const handleImageUpload = (e) => {
+  const handleImageUpload = async (e) => {
     const imageFile = e.target.files[0];
     setFormData({
       ...formData,
       image: imageFile,
     });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -87,60 +87,41 @@ const NewBlog = ({ signedUser }) => {
     setErrorMessage("");
     setSuccessMessage("");
 
-    setIsPreviewOpen(false);
-
     try {
-      // Reference to Firebase Storage bucket
-      const storageRef = ref(storage, "images/" + formData.image.name);
+      // Upload the new image to Firebase Storage if an image is selected
+      const imageFile = formData.image;
+      let imageURL = formData.imageURL; // Get the current image URL
 
-      // Upload the image file to Firebase Storage
-      await uploadBytes(storageRef, formData.image);
+      if (imageFile) {
+        const storageRef = ref(storage, "images/" + imageFile.name);
+        await uploadBytes(storageRef, imageFile);
 
-      // Get the download URL of the uploaded image
-      const imageURL = await getDownloadURL(storageRef);
+        // Get the download URL of the uploaded image
+        imageURL = await getDownloadURL(storageRef);
+      }
 
-      // Create a Date object for the current date and time
-      const currentDate = new Date();
+      const blogRef = doc(db, "blogs", String(pageID));
 
-      // Create an object with all the data, including the imageURL and timePublished
-      const dataToUpload = {
-        blogID: Math.floor(Math.random() * 100000),
+      // Prepare the data to update in Firestore
+      const updatedData = {
         title: formData.title,
-        image: imageURL,
         videoURL: formData.videoURL,
         content: formData.content,
         language: formData.language,
         trending: formData.trending,
-        comments: [],
-        timePublished: currentDate, // Add the timePublished field
       };
 
-      // Log the data with the image URL and timePublished
-      console.log(dataToUpload);
+      // Only include the image field in the update if a new image was uploaded
+      if (imageFile) {
+        updatedData.image = imageURL;
+      }
 
-      const customDocRef = doc(db, "blogs", String(dataToUpload.blogID));
+      // Update the Firestore document with the new formData
+      await updateDoc(blogRef, updatedData);
 
-      // Set the data using the custom document reference
-      await setDoc(customDocRef, dataToUpload);
-
-      // Set the success message
-      setSuccessMessage("Blog has been added successfully!");
-
-      // Clear the form
-      setFormData({
-        title: "",
-        image: null,
-        videoURL: "",
-        content: [""],
-        language: "English",
-        trending: false,
-      });
-
-      // Clear the focused content index
-      // setFocusedContentIndex(null);
+      setSuccessMessage("Blog has been updated successfully!");
     } catch (error) {
-      // Set the error message
-      setErrorMessage("Error adding blog: " + error.message);
+      setErrorMessage("Error updating blog: " + error.message);
     }
   };
 
@@ -170,7 +151,7 @@ const NewBlog = ({ signedUser }) => {
   if (signedUser) {
     return (
       <div className="p-4 relative w-screen overflow-x-hidden">
-        <PageHeader>New Blog</PageHeader>
+        <PageHeader>Edit Blog</PageHeader>
         <form onSubmit={handleSubmit} className="max-w-[90vw] mx-auto">
           <div className="mb-4">
             <label htmlFor="title" className="block text-gray-600">
@@ -188,7 +169,7 @@ const NewBlog = ({ signedUser }) => {
           </div>
           <div className="mb-4">
             <label htmlFor="image" className="block text-gray-600">
-              Upload Image: <span className="text-red-600">*</span>
+              Choose a new image: <span className="text-red-600">*</span>
             </label>
             <input
               type="file"
@@ -197,7 +178,6 @@ const NewBlog = ({ signedUser }) => {
               accept="image/*"
               onChange={handleImageUpload}
               className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
-              required
             />
           </div>
           <div className="mb-4">
@@ -276,33 +256,51 @@ const NewBlog = ({ signedUser }) => {
           </button>
         </form>
         {isPreviewOpen ? (
-          <div className="flex justify-center my-4">
+          <div className="flex justify-center gap-2 my-4">
             <button
               onClick={closePreview}
               className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
             >
               Close Preview
             </button>
+            <a
+              href={`/blog/${blog.blogID}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            >
+              Live View
+            </a>
           </div>
         ) : (
-          <div className="flex justify-center my-4">
+          <div className="flex justify-center gap-2 my-4">
             <button
               onClick={openPreview}
               className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
             >
               Open Preview
             </button>
+            <a
+              href={`/blog/${blog.blogID}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            >
+              Live View
+            </a>
           </div>
         )}
 
         {isPreviewOpen && (
           <div className="preview-popup">
-            <BlogPreview blog={formData} closePreview={closePreview} />
+            <BlogPreview
+              blog={formData}
+              closePreview={closePreview}
+              imageURL={blog.image}
+            />
           </div>
         )}
       </div>
     );
   }
-};
-
-export default NewBlog;
+}
