@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-// import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
@@ -15,19 +15,19 @@ const firebaseConfig = {
 
 initializeApp(firebaseConfig);
 
-// export const auth = getAuth();
+export const auth = getAuth();
 export const db = getFirestore();
 export const storage = getStorage();
 
-// export let signedUser = null; // initialize signedUser to null
+export let signedUser = null; // initialize signedUser to null
 
-// onAuthStateChanged(auth, (user) => {
-//   signedUser = user
-//     ? {
-//         email: user.email,
-//         displayName: user.displayName,
-//         photoURL: user.photoURL,
-//         uid: user.uid,
-//       }
-//     : null;
-// });
+onAuthStateChanged(auth, (user) => {
+  signedUser = user
+    ? {
+        email: user.email,
+        displayName: user.displayName,
+        photoURL: user.photoURL,
+        uid: user.uid,
+      }
+    : null;
+});

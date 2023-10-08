@@ -8,11 +8,11 @@ import BlogPreview from "./BlogPreview";
 import ReactQuill from "react-quill";
 import EditorToolbar, { modules, formats } from "../../EditorToolbar";
 import "react-quill/dist/quill.snow.css";
+import { useNavigate } from "react-router";
 
-const NewBlog = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+const NewBlog = ({ signedUser }) => {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false); // State to track preview popup
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     title: "",
@@ -136,11 +136,23 @@ const NewBlog = () => {
     }
   };
 
-  if (!isLoggedIn) {
-    return <PostPermission onLogin={() => setIsLoggedIn(true)} />;
+  if (!signedUser) {
+    return (
+      <div className="h-[70vh] w-screen flex flex-col items-center justify-center">
+        <p>Please Login to Access this page</p>
+        <button
+          className="bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 mt-4"
+          onClick={() => {
+            navigate("/pro-login");
+          }}
+        >
+          Login
+        </button>
+      </div>
+    );
   }
 
-  if (isLoggedIn) {
+  if (signedUser) {
     return (
       <div className="p-4 relative w-screen overflow-x-hidden">
         <PageHeader>New Blog</PageHeader>
