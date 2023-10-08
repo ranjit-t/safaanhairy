@@ -9,7 +9,6 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-
   "dependencies": {
     "emailjs-com": "latest",
     "firebase": "latest",
@@ -23,9 +22,7 @@
     "react-scripts": "latest",
     "react-google-recaptcha": "latest",
     "react-router-dom": "latest"
-  }
-,
-
+  },
   "devDependencies": {
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",

@@ -20,6 +20,7 @@ import Login from "./Pages/Pro/Login";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./FireBase/config";
 import Logout from "./Pages/Pro/Logout";
+import EditList from "./Pages/Pro/EditBlogs/EditList";
 
 function App() {
   const { blogs, loading, error } = useFetchBlogs();
@@ -113,7 +114,7 @@ function App() {
             {signedUser && (
               <div className="flex  gap-2">
                 <a href="/publish-article">Publish</a>
-                <a href="">Edit</a>
+                <a href="/pro-edit-blogs">Edit</a>
                 <button>
                   <Logout />
                 </button>
@@ -159,6 +160,12 @@ function App() {
             element={<NewBlog signedUser={signedUser} />}
           />
           <Route path="/pro-login" element={<Login />} />
+          <Route
+            path="/pro-edit-blogs"
+            element={
+              <EditList blogs={blogs} error={error} isLoading={loading} />
+            }
+          />
 
           <Route
             path="/en/blogs"
