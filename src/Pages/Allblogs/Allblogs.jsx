@@ -118,7 +118,7 @@ export default function Allblogs({ blogs, isLoading, error }) {
                 <img
                   src={blog.image}
                   alt=""
-                  className="w-screen h-[300px] object-cover md:w-[50vw] mt-4 transform scale-95 hover:scale-100 transition-transform duration-300 ease-in-out"
+                  className="w-screen h-fit w-fit max-h-[250px] object-cover md:w-[50vw] mt-4 transform scale-95 hover:scale-100 transition-transform duration-300 ease-in-out"
                 />
               </div>
             </div>
@@ -142,7 +142,7 @@ export default function Allblogs({ blogs, isLoading, error }) {
           return (
             <div
               key={idx}
-              className="flex flex-col items-center justify-center p-8 m-4  rounded-lg cursor-pointer w-[80vw] sm:w-[480px] bg-white shadow-md  h-[450px] "
+              className="flex flex-col items-center  p-8 m-4  rounded-lg cursor-pointer w-[80vw] sm:w-[480px] bg-white shadow-md  h-[450px] "
               onClick={() => {
                 navigate(`/blog/${blog.ID}`);
               }}
@@ -160,7 +160,7 @@ export default function Allblogs({ blogs, isLoading, error }) {
                   <img
                     src={imageElement.src}
                     alt="Blog Image"
-                    className="h-[300px] ] mt-4 transform scale-95 hover:scale-100 transition-transform duration-300 ease-in-out object-cover"
+                    className="min-h-[220px] w-full object-contain max-h-[300px] mt-4 transform scale-95 hover:scale-100 transition-transform duration-300 ease-in-out "
                   />
                 )}
                 {!imageElement && videoThumbnailURL && (

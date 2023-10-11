@@ -4,15 +4,15 @@ import PhotoGallery from "./PhotoGallery";
 import VideoIntro from "./VideoIntro";
 import Form from "./Form.Jsx";
 import AsSeenIn from "./AsSeenIn";
-import Banner from "../../Images/Banner1280x500.jpg";
+import Banner from "../../Images/Banner1280x500.jpeg";
 
 export default function Homepage() {
   return (
-    <div className="flex flex-col items-center w-screen">
+    <div className="flex flex-col items-center w-screen bg-[#F7F5EF] box-design">
       <img
         src={Banner}
         alt="Vivre De Sa Passion"
-        className="w-full min-h-[200px] max-h-[500px] box-design object-cover"
+        className=" min-h-[200px] max-h-[500px] h-auto   object-cover "
       />
       <div className="bg-[#F4E0B9]  text-lg  flex flex-col md:flex-row items-center justify-evenly  w-screen px-[10vw] py-10 gap-6 box-design">
         <div className="max-w-[200px] md:max-w-[350px] ">

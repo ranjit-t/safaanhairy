@@ -128,7 +128,7 @@ function App() {
             Entrepreneurship, Communications & Leadership
           </p>
 
-          <div className="ml-4 mr-4 ">
+          <div className="ml-4 mr-4 -mt-2">
             {language === "French" ? (
               <img
                 src={uk}

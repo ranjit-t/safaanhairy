@@ -7,6 +7,9 @@ import TrendingBlogs from "./TrendingBlogs.jsx";
 import ReCAPTCHA from "react-google-recaptcha"; // Import reCAPTCHA
 import { db } from "../../FireBase/config.js";
 import { doc, getDoc, updateDoc, setDoc } from "firebase/firestore";
+import user from "../../Images/user.png";
+import FB from "../../Images/facebook.png";
+import LinkedIn from "../../Images/linkedin.png";
 
 export default function Singleblog({
   blogs,
@@ -199,6 +202,15 @@ export default function Singleblog({
               ? "Article Published by Safaa Nhairy"
               : "Article publié par Safaa Nhairy"}
           </p>
+          <div className="flex justify-end w-[90vw]">
+            Share on &nbsp;
+            <button onClick={shareOnFacebook}>
+              <img src={FB} alt="Facebook" className="w-10 mx-2" />
+            </button>
+            <button onClick={shareOnLinkedIn} className="w-10">
+              <img src={LinkedIn} alt="Facebook" />
+            </button>
+          </div>
         </div>
         <hr className="mb-8" />
         <div className="">
@@ -210,16 +222,28 @@ export default function Singleblog({
               {blog.comments.length > 0 ? (
                 blog.comments.map((comment, idx) => {
                   return (
-                    <div
-                      key={idx}
-                      className="my-4 py-4 px-[5vw] sm:px-[15vw] relative"
-                    >
-                      <span className="font-bold">{comment.name} :</span>
-                      <span className="text-gray-600"> {comment.comment}</span>
-                      <span className="text-[10px] text-gray-400 absolute right-[5vw] sm:right-[15vw] bottom-4">
-                        {comment.time}
-                      </span>
-                      <hr className="mt-4" />
+                    <div key={idx}>
+                      <div className="my-4 py-4 px-[5vw] sm:px-[15vw] relative flex items-start">
+                        <img
+                          src={user}
+                          alt="user"
+                          className="w-10 mr-2 -mt-3"
+                        />
+                        <span className="font-bold">{comment.name} : </span>
+                        <span> </span>
+                        <span className="text-gray-600 w-[55vw]">
+                          &nbsp; {comment.comment}
+                        </span>
+                        <span className="text-[10px] text-gray-400 absolute right-[5vw] sm:right-[15vw] bottom-1">
+                          {comment.time}
+                        </span>
+                        <span className="font-bold absolute top-4 right-[5vw] sm:right-[15vw] bottom-4">
+                          Reply
+                        </span>
+                      </div>
+                      <div className="flex justify-center -mt-4">
+                        <div className="horizontal-line"></div>
+                      </div>
                     </div>
                   );
                 })
@@ -318,16 +342,24 @@ export default function Singleblog({
             {oldBlogFireStore?.comments.length > 0 ? (
               oldBlogFireStore.comments.map((comment, idx) => {
                 return (
-                  <div
-                    key={idx}
-                    className="my-4 py-4 px-[5vw] sm:px-[15vw] relative"
-                  >
-                    <span className="font-bold">{comment.name} :</span>
-                    <span className="text-gray-600"> {comment.comment}</span>
-                    <span className="text-[10px] text-gray-400 absolute right-[5vw] sm:right-[15vw] bottom-4">
-                      {comment.time}
-                    </span>
-                    <hr className="mt-4" />
+                  <div key={idx}>
+                    <div className="my-4 py-4 px-[5vw] sm:px-[15vw] relative flex items-start">
+                      <img src={user} alt="user" className="w-10 mr-2 -mt-3" />
+                      <span className="font-bold">{comment.name} : </span>
+                      <span> </span>
+                      <span className="text-gray-600 w-[55vw]">
+                        &nbsp; {comment.comment}
+                      </span>
+                      <span className="text-[10px] text-gray-400 absolute right-[5vw] sm:right-[15vw] bottom-1">
+                        {comment.time}
+                      </span>
+                      <span className="font-bold absolute top-4 right-[5vw] sm:right-[15vw] bottom-4">
+                        Reply
+                      </span>
+                    </div>
+                    <div className="flex justify-center -mt-4">
+                      <div className="horizontal-line"></div>
+                    </div>
                   </div>
                 );
               })
@@ -406,3 +438,18 @@ function extractYoutubeVideoID(url) {
   const match = url.match(/[?&]v=([^&]+)/);
   return match && match[1];
 }
+
+const shareOnFacebook = () => {
+  const url = encodeURIComponent(window.location.href);
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank");
+};
+
+const shareOnLinkedIn = () => {
+  // const title = encodeURIComponent("Article Title");
+  // const summary = encodeURIComponent("Article Summary");
+  const source = encodeURIComponent(window.location.href);
+  window.open(
+    `https://www.linkedin.com/shareArticle?mini=true&url=${source}`,
+    "_blank"
+  );
+};
