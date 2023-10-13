@@ -58,10 +58,13 @@ const BlogPreview = ({ blog, closePreview, imageURL }) => {
               ></div>
             );
           })} */}
-          <div
+          {/* <div
             dangerouslySetInnerHTML={{ __html: blog.content }}
             className="py-4  mx-[10vw] leading-8 text-justify flex  oldBlog"
-          ></div>
+          ></div> */}
+          <div className="w-full px-[10vw] pt-8 leading-8 text-justify flex justify-center oldBlog">
+            <div dangerouslySetInnerHTML={{ __html: blog.content }} />
+          </div>
           <p className="text-lg font-bold mt-10 text-center">
             {blog.language === "English"
               ? "Article Published by Safaa Nhairy"
