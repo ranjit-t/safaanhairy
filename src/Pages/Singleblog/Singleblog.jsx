@@ -460,7 +460,7 @@ export default function Singleblog({
                       </div>
                       {comment.replies && (
                         <div className="flex flex-col items-center mb-8 mx-[50px]">
-                          <p className="text-left">
+                          <p className="text-left underline decoration-black underline-offset-4">
                             {language === "English" ? "Replies" : "Réponses"}
                           </p>
                           {comment.replies.map((reply, replyIdx) => {
@@ -557,7 +557,7 @@ export default function Singleblog({
                         </div>
                       )}
                       <div className="flex justify-center -mt-4">
-                        <div className="horizontal-line"></div>
+                        <div className="horizontal-line mt-3"></div>
                       </div>
                     </div>
                   );
@@ -692,7 +692,7 @@ export default function Singleblog({
 
                     {comment.replies && (
                       <div className="flex flex-col items-center mb-8 mx-[50px]">
-                        <p className="text-left">
+                        <p className="text-left underline decoration-black underline-offset-4">
                           {language === "English" ? "Replies" : "Réponses"}
                         </p>
                         {comment.replies.map((reply, replyIdx) => {
@@ -787,7 +787,7 @@ export default function Singleblog({
                       </div>
                     )}
                     <div className="flex justify-center -mt-4">
-                      <div className="horizontal-line"></div>
+                      <div className="horizontal-line mt-3"></div>
                     </div>
                   </div>
                 );

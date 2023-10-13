@@ -32,15 +32,20 @@ function App() {
 
   let initialLanguage;
 
+  const localStoredLang = localStorage.getItem("Safaa-Nhairy-Site-Language");
+
   if (isFrench) {
     initialLanguage = "French";
   } else if (isEnglish) {
     initialLanguage = "English";
+  } else if (localStoredLang) {
+    initialLanguage = JSON.parse(localStoredLang);
   } else {
     initialLanguage = "English";
   }
 
   const [language, setLanguage] = useState(initialLanguage);
+
   const [signedUser, setsignedUser] = useState(null);
 
   useEffect(() => {
