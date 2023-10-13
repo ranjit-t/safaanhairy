@@ -446,7 +446,7 @@ export default function Singleblog({
                         <span className="text-gray-600 w-[55vw]">
                           &nbsp; {comment.comment}
                         </span>
-                        <span className="text-[10px] text-gray-400 absolute right-[5vw] sm:right-[15vw] bottom-1">
+                        <span className="text-[10px] text-gray-400 absolute right-[5vw] sm:right-[15vw] -bottom-2">
                           {comment.time}
                         </span>
                         <button
@@ -488,7 +488,7 @@ export default function Singleblog({
                                   <span className="text-gray-600 w-[55vw]">
                                     &nbsp; {reply.reply}
                                   </span>
-                                  <span className="text-[10px] text-gray-400 absolute right-[5vw] sm:right-[15vw] bottom-1">
+                                  <span className="text-[10px] text-gray-400 absolute right-[5vw] sm:right-[15vw] -bottom-2">
                                     {reply.time}
                                   </span>
                                 </div>
@@ -677,7 +677,7 @@ export default function Singleblog({
                       <span className="text-gray-600 w-[55vw]">
                         &nbsp; {comment.comment}
                       </span>
-                      <span className="text-[10px] text-gray-400 absolute right-[5vw] sm:right-[15vw] bottom-1">
+                      <span className="text-[10px] text-gray-400 absolute right-[5vw] sm:right-[15vw] -bottom-2">
                         {comment.time}
                       </span>
                       <button
@@ -686,14 +686,14 @@ export default function Singleblog({
                           toggleReplyForm(idx); // Open/close the reply form
                         }}
                       >
-                        {language === "English" ? "Replies" : "Réponses"}
+                        {language === "English" ? "Reply" : "Répondre"}
                       </button>
                     </div>
 
                     {comment.replies && (
                       <div className="flex flex-col items-center mb-8 mx-[50px]">
                         <p className="text-left">
-                          {language === "English" ? "Reply" : "Répondre"}
+                          {language === "English" ? "Replies" : "Réponses"}
                         </p>
                         {comment.replies.map((reply, replyIdx) => {
                           return (
@@ -718,7 +718,7 @@ export default function Singleblog({
                                 <span className="text-gray-600 w-[55vw]">
                                   &nbsp; {reply.reply}
                                 </span>
-                                <span className="text-[10px] text-gray-400 absolute right-[5vw] sm:right-[15vw] bottom-1">
+                                <span className="text-[10px] text-gray-400 absolute right-[5vw] sm:right-[15vw] -bottom-2">
                                   {reply.time}
                                 </span>
                               </div>
